@@ -2,14 +2,14 @@
 
 @section('content')
     <div class="container">
-        <div class="row">
+        <div class="row pt-5">
             <div class="col-3 p-5">
                 <img
                     src="https://instagram.fkiv1-1.fna.fbcdn.net/v/t51.2885-15/e35/s150x150/91714430_341255496835016_6621251509665063906_n.jpg?_nc_ht=instagram.fkiv1-1.fna.fbcdn.net&_nc_cat=108&_nc_ohc=LhUb5an93MIAX-rsVS1&oh=240df0d1c72b309b1b172f8248bf3229&oe=5EBE161B"
-                    class="rounded-circle">
+                    class="rounded-circle" alt="logo">
             </div>
             <div class="col-9 pt-5">
-                <div><h1>Laravel Social</h1></div>
+                <div><h1>{{ $user->username }}</h1></div>
                 <div class="d-flex">
                     <div class="pr-5"><strong>100k</strong> followers</div>
                     <div class="pr-5"><strong>200</strong> following</div>
@@ -22,7 +22,6 @@
                 <div><a href="#">www.socialLaravel.org</a></div>
             </div>
         </div>
-
         <div class="row pt-5">
             <div class="col-4">
                 <img
@@ -41,4 +40,5 @@
             </div>
         </div>
     </div>
+
 @endsection
