@@ -16,7 +16,7 @@
                 <div class="d-flex">
                     <div class="pr-5"><strong>100k</strong> followers</div>
                     <div class="pr-5"><strong>200</strong> following</div>
-                    <div class="pr-5"><strong>150</strong> posts</div>
+                    <div class="pr-5"><strong>{{$user->posts->count()}}</strong> posts</div>
                 </div>
                 <div class="pt-4 font-weight-bold">{{$user->profile->title}}</div>
                 <div>{{$user->profile->description}}</div>
@@ -26,9 +26,13 @@
         <div class="row pt-5">
             @foreach($user->posts as $post)
                 <div class="col-md-4 p-4">
-                    <div class="square"
-                         style="background-image: url('/storage/{{$post->image}}');">
-                    </div>
+                    <img src="/storage/{{$post->image}}" class="w-100" alt="">
+
+
+{{--                    CSS Squaring--}}
+{{--                    <div class="square"--}}
+{{--                         style="background-image: url('/storage/{{$post->image}}');">--}}
+{{--                    </div>--}}
                 </div>
             @endforeach
         </div>
