@@ -39,4 +39,8 @@ class PostsController extends Controller
 
         return redirect('/profile/'.auth()->id());
     }
+
+    public function show(Post $post){
+        return view('posts.show',compact('post'));
+    }
 }
