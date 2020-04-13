@@ -11,7 +11,11 @@
             <div class="col-md-8 pt-5">
                 <div class="d-flex justify-content-between align-items-baseline">
                     <h1>{{ $user->username }}</h1>
-                    <a href="/p/create">Add new posts</a>
+
+                    @can('update', $user->profile)
+                        <a href="/p/create">Add new posts</a>
+                    @endcan
+
                 </div>
 
                 @can('update', $user->profile)
