@@ -24,21 +24,13 @@
             </div>
         </div>
         <div class="row pt-5">
-            <div class="col-md-4">
-                <img
-                    src="https://instagram.fkiv1-1.fna.fbcdn.net/v/t51.2885-15/e35/92754246_221434522453988_7367451367236005007_n.jpg?_nc_ht=instagram.fkiv1-1.fna.fbcdn.net&_nc_cat=108&_nc_ohc=29wJXpECsDMAX_0Hmiz&oh=cdc41c0039076ccf8efc052a8e20a186&oe=5EBC849C"
-                    class="w-100">
-            </div>
-            <div class="col-md-4">
-                <img
-                    src="https://instagram.fkiv1-1.fna.fbcdn.net/v/t51.2885-15/e35/92969954_516392249048778_3976973090557595859_n.jpg?_nc_ht=instagram.fkiv1-1.fna.fbcdn.net&_nc_cat=106&_nc_ohc=vVdaFLrKQ0EAX-fMi1w&oh=35a1789135a81dd6d5b2ed0a37cc6f25&oe=5EBBC793"
-                    class="w-100">
-            </div>
-            <div class="col-md-4">
-                <img
-                    src="https://instagram.fkiv1-1.fna.fbcdn.net/v/t51.2885-15/e35/93412091_1127488694251638_8316735854444722203_n.jpg?_nc_ht=instagram.fkiv1-1.fna.fbcdn.net&_nc_cat=106&_nc_ohc=Inov-FqhEcIAX8TChs8&oh=9e23a8305aec3b5c7db83be23579c0ae&oe=5EBBC1E4"
-                    class="w-100">
-            </div>
+            @foreach($user->posts as $post)
+                <div class="col-md-4 p-4">
+                    <div class="square"
+                         style="background-image: url('/storage/{{$post->image}}');">
+                    </div>
+                </div>
+            @endforeach
         </div>
     </div>
 
