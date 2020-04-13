@@ -15,11 +15,9 @@
                     <div class="pr-5"><strong>200</strong> following</div>
                     <div class="pr-5"><strong>150</strong> posts</div>
                 </div>
-                <div class="pt-4 font-weight-bold">socialLaravel.org</div>
-                <div>Attigerint ei desiderant ne repugnaret arbitrabar praesertim antedictis id. Re quaestione
-                    divisibile si eo indefinite vi. Ha attinet si minimum ut ipsemet percipi impulsu putarim.
-                </div>
-                <div><a href="#">www.socialLaravel.org</a></div>
+                <div class="pt-4 font-weight-bold">{{$user->profile->title}}</div>
+                <div>{{$user->profile->description}}</div>
+                <div><a href="#">{{$user->profile->url}}</a></div>
             </div>
         </div>
         <div class="row pt-5">
