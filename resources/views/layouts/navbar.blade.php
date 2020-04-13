@@ -14,7 +14,7 @@
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a href="/home" class="nav-link">Home</a>
+                    <a href="/profile/{{auth()->id()}}" class="nav-link">Home</a>
                 </li>
             </ul>
 

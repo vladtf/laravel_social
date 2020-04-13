@@ -11,7 +11,7 @@
             <div class="col-md-8 pt-5">
                 <div class="d-flex justify-content-between align-items-baseline">
                     <h1>{{ $user->username }}</h1>
-                    <a href="">Add new posts</a>
+                    <a href="/p/create">Add new posts</a>
                 </div>
                 <div class="d-flex">
                     <div class="pr-5"><strong>100k</strong> followers</div>
