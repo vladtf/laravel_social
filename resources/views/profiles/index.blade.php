@@ -14,7 +14,9 @@
                     <a href="/p/create">Add new posts</a>
                 </div>
 
-                <a href="/profile/{{$user->id}}/edit">Edit Profile</a>
+                @can('update', $user->profile)
+                    <a href="/profile/{{$user->id}}/edit">Edit Profile</a>
+                @endcan
 
                 <div class="d-flex">
                     <div class="pr-5"><strong>100k</strong> followers</div>
