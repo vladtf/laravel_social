@@ -6,7 +6,7 @@
             <div class="col-md-4 p-5" style="margin: 1px auto;">
                 <img
                     src="/storage/{{ $user->profile->image }}"
-                    class="rounded-circle p-3 w-100" alt="">
+                    class="rounded-circle w-100" alt="">
             </div>
             <div class="col-md-8 pt-5">
                 <div class="d-flex justify-content-between align-items-baseline">
