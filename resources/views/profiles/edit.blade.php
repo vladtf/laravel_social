@@ -43,7 +43,7 @@
                         <label for="url" class="col-md-4 col-form-label">URL</label>
 
                         <input id="url" type="text" class="form-control @error('url') is-invalid @enderror"
-                               name="url" value="{{ old('url') ?? $user->profile->url}}" required autocomplete="url" autofocus>
+                               name="url" value="{{ old('url') ?? $user->profile->url}}" autocomplete="url" autofocus>
 
                         @error('url')
                         <span class="invalid-feedback" role="alert">

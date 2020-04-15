@@ -3,13 +3,17 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\GithubController;
 use App\Providers\RouteServiceProvider;
 use App\User;
+use http\Client;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Str;
 use Laravel\Socialite\Facades\Socialite;
+use Ramsey\Uuid\Uuid;
 
 class LoginController extends Controller
 {
@@ -45,7 +49,6 @@ class LoginController extends Controller
 
     public function github()
     {
-
         // send user's request to github
         return Socialite::driver('github')->redirect();
     }
@@ -59,15 +62,12 @@ class LoginController extends Controller
         // if this user doesn't exists, add them
         // if they do, get the model
         // either way, authenticate the user into the application
-        $user = User::firstOrCreate([
-            'email' => $user->email
-        ], [
-            'name' => $user->name,
-            'password' => Hash::make(Str::random(24))
-        ]);
 
-        Auth::login($user, true);
+        if ( $user = User::firstWhere('email', $user->getEmail()))  {
+            Auth::login($user, true);
+            return redirect('/');
+        }
 
-        return redirect('/');
+        return redirect()->action('GithubController@show',['email'=>$user->getEmail(),'name'=>$user->getName(),'username' => $user->getNickname()]);
     }
 }

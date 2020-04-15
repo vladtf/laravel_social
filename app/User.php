@@ -7,6 +7,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Mail;
+use Webpatser\Uuid\Uuid;
 
 class User extends Authenticatable
 {
@@ -46,7 +47,8 @@ class User extends Authenticatable
         static::created(
             function ($user) {
                 $user->profile()->create([
-                   'title' => $user->username,
+                    'title' => $user->username,
+                    'description' => "Default description ( go edit to change )",
                 ]);
 
                 Mail::to($user->email)->send(new NewUserWelcomeMail());
@@ -59,7 +61,8 @@ class User extends Authenticatable
         return $this->hasMany(Post::class)->orderBy('created_at', 'DESC');
     }
 
-    public function following(){
+    public function following()
+    {
         return $this->belongsToMany(Profile::class);
     }
 

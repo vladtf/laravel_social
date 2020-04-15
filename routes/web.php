@@ -15,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 
 Auth::routes();
+Route::get('/register/github/', 'GithubController@show')->name('register.github.show');
+Route::post('/register/github/', 'GithubController@store')->name('register.github.store');
 
 Route::get('/email', function (){
     return new \App\Mail\NewUserWelcomeMail();
