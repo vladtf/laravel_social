@@ -2,6 +2,10 @@
 
 @section('content')
     <div class="container">
+        <h1>Posts</h1>
+        @if($posts->count() < 1)
+            <h2>Nothing to see here. Go follow someone.</h2>
+        @else
         @foreach($posts as $post)
             <div class="row">
                 <div class="col-6 offset-3">
@@ -24,7 +28,7 @@
                 </div>
             </div>
         @endforeach
-
+        @endif
         <div class="row">
             <div class="col-12 d-flex justify-content-center">
                 {{ $posts -> links() }}

@@ -19,6 +19,9 @@
                         <a href="/profile/{{ auth()->id() }}" class="nav-link">My profile</a>
                     @endauth
                 </li>
+                <li class="nav-item">
+                    <a href="/profile" class="nav-link">Profiles</a>
+                </li>
             </ul>
 
             <!-- Right Side Of Navbar -->
