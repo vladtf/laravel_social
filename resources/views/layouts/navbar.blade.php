@@ -2,7 +2,8 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
     <div class="container pt-2">
         <a class="navbar-brand d-flex" href="{{ url('/') }}">
-            <div><img src="/svg/laravelSocialLogo.svg" class="pr-3" style="height: 20px; border-right: 1px solid #e2e3e5;"></div>
+            <div><img src="/svg/laravelSocialLogo.svg" class="pr-3"
+                      style="height: 20px; border-right: 1px solid #e2e3e5;"></div>
             <div class="pl-3">Laravel Social</div>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -14,7 +15,9 @@
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a href="/profile/{{auth()->id()}}" class="nav-link">My profile</a>
+                    @auth
+                        <a href="/profile/{{ auth()->id() }}" class="nav-link">My profile</a>
+                    @endauth
                 </li>
             </ul>
 
