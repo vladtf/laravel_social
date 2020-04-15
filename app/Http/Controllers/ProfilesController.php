@@ -11,33 +11,23 @@ class ProfilesController extends Controller
 {
     public function index(User $user)
     {
+        $users = User::paginate(10);
 
+        return view('profiles.index', compact('users'));
     }
 
     public function show(User $user)
     {
         $follows = (auth()->user()) ? auth()->user()->following->contains($user->id) : false;
 
-        $postsCount = Cache::remember(
-            'count.posts.' . $user->id,
-            now()->addSecond(30), function () use ($user) {
-            return $user->posts->count();
-        });
+        $postsCount = $user->getPostsCount();
 
-        $followersCount = Cache::remember(
-            'count.followers.' . $user->id,
-            now()->addSecond(30), function () use ($user) {
-            return $user->profile->followers->count();
-        });
+        $followersCount = $user->getFollowersCount();
 
-        $followingCount = Cache::remember(
-            'count.following.' . $user->id,
-            now()->addSecond(30), function () use ($user) {
-            return $user->following->count();
-        });
+        $followingCount = $user->getFollowingCount();
 
 
-        return view('profiles.index', compact('user', 'follows', 'postsCount', 'followersCount', 'followingCount'));
+        return view('profiles.show', compact('user', 'follows', 'postsCount', 'followersCount', 'followingCount'));
     }
 
 
@@ -75,4 +65,6 @@ class ProfilesController extends Controller
 
         return redirect("/profile/{$user->id}");
     }
+
+
 }

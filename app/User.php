@@ -6,7 +6,9 @@ use App\Mail\NewUserWelcomeMail;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Mail;
+use phpDocumentor\Reflection\Types\This;
 use Webpatser\Uuid\Uuid;
 
 class User extends Authenticatable
@@ -69,5 +71,32 @@ class User extends Authenticatable
     public function profile()
     {
         return $this->hasOne(Profile::class);
+    }
+
+    public function getPostsCount()
+    {
+        return Cache::remember(
+            'count.posts.' . $this->id,
+            now()->addSecond(30), function () {
+            return $this->posts->count();
+        });
+    }
+
+    public function getFollowersCount()
+    {
+        return Cache::remember(
+            'count.followers.' . $this->id,
+            now()->addSecond(30), function (){
+            return $this->profile->followers->count();
+        });
+    }
+
+    public function getFollowingCount()
+    {
+        return Cache::remember(
+            'count.following.' . $this->id,
+            now()->addSecond(30), function (){
+            return $this->following->count();
+        });
     }
 }
