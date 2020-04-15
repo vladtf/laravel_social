@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use App\Http\Controllers\GithubController;
 use App\Providers\RouteServiceProvider;
 use App\User;
-use http\Client;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -63,11 +62,12 @@ class LoginController extends Controller
         // if they do, get the model
         // either way, authenticate the user into the application
 
-        if ( $user = User::firstWhere('email', $user->getEmail()))  {
+        if (User::where('email', $user->getEmail())->first()) {
+            $user = User::firstWhere('email', $user->getEmail());
             Auth::login($user, true);
             return redirect('/');
         }
 
-        return redirect()->action('GithubController@show',['email'=>$user->getEmail(),'name'=>$user->getName(),'username' => $user->getNickname()]);
+        return redirect()->action('GithubController@show', ['email' => $user->getEmail(), 'name' => $user->getName(), 'username' => $user->getNickname()]);
     }
 }
