@@ -9,11 +9,21 @@ use Intervention\Image\Facades\Image;
 
 class ProfilesController extends Controller
 {
-    public function index(User $user)
+    public function index()
     {
-        $users = User::paginate(10);
+        if (\request()->has('filter')) {
+            $filter = \request('filter');
+            $users = User::where('username', 'like', "%$filter%")
+                ->paginate(10)
+                ->appends('filter', $filter);
+        } else {
+            $users = User::paginate(10);
+        }
 
-        return view('profiles.index', compact('users'));
+        return view('profiles.index', [
+            'users' => $users,
+            'filter' => $filter ?? ''
+        ]);
     }
 
     public function show(User $user)

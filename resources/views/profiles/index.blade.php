@@ -3,7 +3,14 @@
 @section('content')
 
     <div class="container">
-        <h1>Users</h1>
+            <!-- Search form -->
+            <form class="form-inline d-flex md-form form-sm mt-0 offset-2 pt-5" action="/profile">
+                @method('POST')
+                <i class="fas fa-search" aria-hidden="true"></i>
+                <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search"
+                       aria-label="Search" name="filter" value="{{ $filter }}">
+            </form>
+
         @foreach($users as $user)
             @php
                 $follows = (auth()->user()) ? auth()->user()->following->contains($user->id) : false;
@@ -19,15 +26,15 @@
 
                 <div class="col-md-4 p-5" style="margin: 1px auto;">
 
-                    <a href="/profile/{{$user->id}}" class="text-dark" >
+                    <a href="/profile/{{$user->id}}" class="text-dark">
                         <img src="{{ $user->profile->profileImage() }}"
-                            class="rounded-circle w-100" alt="">
+                             class="rounded-circle w-100" alt="">
                     </a>
                 </div>
                 <div class="col-md-8 pt-5">
                     <div class="d-flex justify-content-between align-items-baseline">
                         <div class="d-flex align-items-center pb-2">
-                            <a href="/profile/{{$user->id}}" class="text-dark" >
+                            <a href="/profile/{{$user->id}}" class="text-dark">
                                 <div class="h4">{{ $user->username }}</div>
                             </a>
 
