@@ -11,18 +11,18 @@ class ProfilesController extends Controller
 {
     public function index()
     {
-        if (\request()->has('filter')) {
-            $filter = \request('filter');
-            $users = User::where('username', 'like', "%$filter%")
+        if (\request()->has('search')) {
+            $search = \request('search');
+            $users = User::where('username', 'like', "%$search%")
                 ->paginate(10)
-                ->appends('filter', $filter);
+                ->appends('filter', $search);
         } else {
             $users = User::paginate(10);
         }
 
         return view('profiles.index', [
             'users' => $users,
-            'filter' => $filter ?? ''
+            'search' => $search ?? ''
         ]);
     }
 

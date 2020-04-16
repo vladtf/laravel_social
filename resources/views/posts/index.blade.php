@@ -2,9 +2,11 @@
 
 @section('content')
     <div class="container">
-        <h1>Posts</h1>
+        <h1 class="text-light">Posts</h1>
         @if($posts->count() < 1)
-            <h2>Nothing to see here. Go follow someone.</h2>
+            <a href="/profile" style="color: rgba(27,75,114,0.58)">
+            <h3 >Nothing to see here. Go follow someone.</h3>
+            </a>
         @else
         @foreach($posts as $post)
             <div class="row">

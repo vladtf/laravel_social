@@ -4,11 +4,10 @@
 
     <div class="container">
             <!-- Search form -->
-            <form class="form-inline d-flex md-form form-sm mt-0 offset-2 pt-5" action="/profile">
-                @method('POST')
-                <i class="fas fa-search" aria-hidden="true"></i>
-                <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search"
-                       aria-label="Search" name="filter" value="{{ $filter }}">
+            <form method="get" class="form-inline text-center d-flex md-form form-sm mt-0 pt-5 pl-xl-5 align-items-baseline" action="{{route('profile.index')}}">
+                <i class="fa fa-search" aria-readonly="true"></i>
+                <input class="form-control form-control-sm ml-3 w-100" type="text" placeholder="Search"
+                       aria-label="Search" name="search" id="search" value="{{ $search }}">
             </form>
 
         @foreach($users as $user)
@@ -23,14 +22,14 @@
             @endphp
 
             <div class="pt-5 row">
-
                 <div class="col-md-4 p-5" style="margin: 1px auto;">
 
                     <a href="/profile/{{$user->id}}" class="text-dark">
                         <img src="{{ $user->profile->profileImage() }}"
-                             class="rounded-circle w-100" alt="">
+                             class="rounded-circle w-100 border border-info" alt="">
                     </a>
                 </div>
+
                 <div class="col-md-8 pt-5">
                     <div class="d-flex justify-content-between align-items-baseline">
                         <div class="d-flex align-items-center pb-2">
@@ -67,6 +66,4 @@
                     </div>
                 </div>
             </div>
-
-
 @endsection

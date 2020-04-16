@@ -1,5 +1,5 @@
 <body>
-<nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
+<nav class="navbar navbar-expand-md shadow-sm navbar-style">
     <div class="container pt-2">
         <a class="navbar-brand d-flex" href="{{ url('/') }}">
             <div><img src="/svg/laravelSocialLogo.svg" class="pr-3"
