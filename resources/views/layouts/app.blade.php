@@ -22,14 +22,20 @@
 
     <!-- Load icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
 
+
+
+</head>
 <body>
+
 @include('layouts.navbar')
-<div id="app" class="container">
-    <div class="p-5">
-        @yield('content')
-    </div>
+
+<div id="app">
+        <div class="p-5">
+            <main>
+            @yield('content')
+            </main>
+        </div>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
