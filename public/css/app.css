@@ -10878,7 +10878,7 @@ a.text-dark:focus {
 }
 
 body {
-  background: url("/storage/background/background.jpg") no-repeat center center fixed;
+  background: url("/background/background.jpg") no-repeat center center fixed;
   background-size: cover;
   -o-background-size: cover;
 }
