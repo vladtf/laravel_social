@@ -33,6 +33,7 @@
                         </a>
                     </span>{{ $post->caption }}
                 </p>
+                {{$post->comments->count()}}
             </div>
         </div>
     </div>
