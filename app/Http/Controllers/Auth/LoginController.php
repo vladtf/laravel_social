@@ -68,6 +68,6 @@ class LoginController extends Controller
             return redirect('/');
         }
 
-        return redirect()->action('GithubController@show', ['email' => $user->getEmail(), 'name' => $user->getName(), 'username' => $user->getNickname()]);
+        return redirect()->route('register', ['email' => $user->getEmail(), 'name' => $user->getName(), 'username' => $user->getNickname()]);
     }
 }

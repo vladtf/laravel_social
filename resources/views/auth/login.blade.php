@@ -21,7 +21,7 @@
 
                     <input id="password" type="password"
                            class="form-control mb-4 @error('password') is-invalid @enderror" name="password"
-                           placeholder="Passowrd"
+                           placeholder="Password"
                            required autocomplete="current-password">
 
                     @error('password')

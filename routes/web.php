@@ -15,19 +15,17 @@ use Illuminate\Support\Facades\Route;
 
 
 Auth::routes();
-Route::get('/register/github/', 'GithubController@show')->name('register.github.show');
-Route::post('/register/github/', 'GithubController@store')->name('register.github.store');
 
-Route::get('/email', function (){
+Route::get('/email', function () {
     return new \App\Mail\NewUserWelcomeMail();
 });
 
 Route::post('/follow/{user}', 'FollowsController@store');
 
 Route::get('/', 'PostsController@index');
-Route::get('/p/create','PostsController@create');
-Route::post('/p','PostsController@store');
-Route::get('/p/{post}','PostsController@show');
+Route::get('/p/create', 'PostsController@create');
+Route::post('/p', 'PostsController@store');
+Route::get('/p/{post}', 'PostsController@show');
 
 Route::get('/profile', 'ProfilesController@index')->name('profile.index');
 Route::get('/profile/{user}', 'ProfilesController@show')->name('profile.show');

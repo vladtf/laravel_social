@@ -4,6 +4,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
+
                 <!-- Default form register -->
                 <form class="text-center border border-light p-5" method="POST" action="{{ route('register') }}">
                     @csrf
@@ -11,7 +12,7 @@
 
                     <!-- Username -->
                     <input id="username" type="text" class="form-control mb-4 @error('username') is-invalid @enderror"
-                           name="username" value="{{ old('username') }}" placeholder="Username"
+                           name="username" value="{{ request('username') ?? old('username') }}" placeholder="Username"
                            required autocomplete="username">
                     @error('username')
                     <span class="invalid-feedback" role="alert">
@@ -22,7 +23,7 @@
 
                 <!-- Full Name -->
                     <input id="name" type="text" class="form-control mb-4 @error('name') is-invalid @enderror"
-                           name="name" value="{{ old('name') }}" placeholder="Full Name"
+                           name="name" value="{{request('name') ??  old('name') }}" placeholder="Full Name"
                            required autocomplete="name" autofocus>
 
                     @error('name')
@@ -34,7 +35,7 @@
 
                 <!-- E-mail -->
                     <input id="email" type="email" class="form-control mb-4 @error('email') is-invalid @enderror"
-                           name="email" value="{{ old('email') }}" placeholder="E-mail"
+                           name="email" value="{{ request('email') ?? old('email') }}" placeholder="E-mail"
                            required autocomplete="email">
 
                     @error('email')

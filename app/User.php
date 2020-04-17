@@ -53,7 +53,11 @@ class User extends Authenticatable
                     'description' => "Default description ( go edit to change )",
                 ]);
 
-                Mail::to($user->email)->send(new NewUserWelcomeMail());
+                try {
+                    Mail::to($user->email)->send(new NewUserWelcomeMail());
+                } catch (\Exception $e) {
+                    logger('Failed to send message');
+                }
             }
         );
     }
@@ -62,6 +66,7 @@ class User extends Authenticatable
     {
         return $this->hasMany(Post::class)->orderBy('created_at', 'DESC');
     }
+
     public function comments()
     {
         return $this->hasMany(Comment::class)->orderBy('created_at', 'DESC');
@@ -90,7 +95,7 @@ class User extends Authenticatable
     {
         return Cache::remember(
             'count.followers.' . $this->id,
-            now()->addSecond(30), function (){
+            now()->addSecond(30), function () {
             return $this->profile->followers->count();
         });
     }
@@ -99,7 +104,7 @@ class User extends Authenticatable
     {
         return Cache::remember(
             'count.following.' . $this->id,
-            now()->addSecond(30), function (){
+            now()->addSecond(30), function () {
             return $this->following->count();
         });
     }
