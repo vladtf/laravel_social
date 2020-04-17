@@ -33,7 +33,14 @@
                         </a>
                     </span>{{ $post->caption }}
                 </p>
-                {{$post->comments->count()}}
+                <div class="pr-5"><strong>{{$post->comments->count()}}</strong> comments</div>
+
+                @foreach($post->comments as $comment)
+                    <div>
+                        
+                    </div>
+                    <span class="pt-2">{{$comment->comment}}</span>
+                @endforeach
             </div>
         </div>
     </div>
