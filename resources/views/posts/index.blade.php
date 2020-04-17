@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container col-6">
+    <div class="container col-xl-4">
         @if( $posts->count() < 1 )
             <a href="/profile" class="text-info" style="color: rgba(27,75,114,0.58); font-size: large">
                 Nothing to see here. Go follow someone.
