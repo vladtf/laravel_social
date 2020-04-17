@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Post extends Model
+class Comment extends Model
 {
     protected $guarded = [];
 
@@ -12,7 +12,7 @@ class Post extends Model
         return $this->belongsTo(User::class);
     }
 
-    public  function comments(){
-        return $this->hasMany(Comment::class)->orderBy('created_at','DESC');
+    public function post(){
+        return $this->belongsTo(Post::class);
     }
 }
