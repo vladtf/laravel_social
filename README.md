@@ -23,9 +23,9 @@ It's a web social app based on Laravel - php framerwok.
 
 `$ php artisan serve` ( start local server : http://127.0.0.1:8000/ )
 
-## Gihtub Ouath
+## Gihtub Oauth
 
-To run gituhb authentication you should start your own github oatuh application and insert keys into `.env` file.
+To run gituhb authentication you should start your own github oauth application and insert keys into `.env` file.
 
 ## Sending mail
 
