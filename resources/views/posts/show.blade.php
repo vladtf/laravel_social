@@ -38,12 +38,21 @@
                 <!-- Comments -->
                 <div>
                     @foreach($post->comments as $comment)
-                        <div class="row">
-                            <p class="pt-2">{{$comment->comment}}</p>
-                        </div>
-
+                        <p class="pt-2">{{$comment->comment}}</p>
                     @endforeach
                 </div>
+
+                <div>
+                    <form action="/comment/{{$post->id}}" method="post">
+                        @csrf
+
+                        <input id="comment" type="text"
+                               class="form-control mb-4" name="comment"
+                               value="{{ old('comment') }}" placeholder="Comment ..." required autocomplete="comment"/>
+                        <button class="btn btn-info btn-block my-4" type="submit">Add comment</button>
+                    </form>
+                </div>
+
             </div>
         </div>
 

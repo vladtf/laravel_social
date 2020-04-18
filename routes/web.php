@@ -32,5 +32,7 @@ Route::get('/profile/{user}', 'ProfilesController@show')->name('profile.show');
 Route::get('/profile/{user}/edit', 'ProfilesController@edit')->name('profile.edit');
 Route::patch('/profile/{user}', 'ProfilesController@update')->name('profile.update');
 
+Route::post('/comment/{post}', 'CommentsController@store')->name('comment.store');
+
 Route::get('/login/github', 'Auth\LoginController@github');
 Route::get('/login/github/redirect', 'Auth\LoginController@githubRedirect');

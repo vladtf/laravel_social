@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Post;
-use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
 
 class PostsController extends Controller
@@ -21,6 +20,12 @@ class PostsController extends Controller
         $posts = Post::whereIn('user_id', $users)->with('user')->latest()->paginate(5);
 
         return view('posts.index', compact('posts'));
+    }
+
+
+    public function show(Post $post)
+    {
+        return view('posts.show', compact('post'));
     }
 
     public function create()
@@ -49,8 +54,4 @@ class PostsController extends Controller
         return redirect('/profile/' . auth()->id());
     }
 
-    public function show(Post $post)
-    {
-        return view('posts.show', compact('post'));
-    }
 }
