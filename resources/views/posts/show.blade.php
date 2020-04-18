@@ -36,9 +36,11 @@
                 <hr/>
 
                 <!-- Comments -->
-                <div>
+                <div class="comments-block" style="max-height: 30em;">
                     @foreach($post->comments as $comment)
-                        <p class="pt-2">{{$comment->comment}}</p>
+                        <li class="list-group-item">
+                            <p class="pt-2">{{$comment->comment}}</p>
+                        </li>
                     @endforeach
                 </div>
 

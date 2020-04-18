@@ -38,3 +38,13 @@ body {
     border-radius: 1em;
     box-shadow: 0 0 0 1px rgba(171, 144, 76, 0.76);
 }
+
+.comments-block{
+    background-color: transparent;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+.comments-block::-webkit-scrollbar{
+    display: none;
+}
