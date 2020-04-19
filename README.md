@@ -19,13 +19,14 @@ It's a web social app based on Laravel - php framerwok.
 `$ php artian migrate`
 
 `$ php artisan key:generate`
+
 `$ php artisan storage:link` ( for saving images )
 
 `$ php artisan serve` ( start local server : http://127.0.0.1:8000/ )
 
-## Gihtub Oauth
+## Github Oauth
 
-To run gituhb authentication you should start your own github oauth application and insert keys into `.env` file.
+To run github authentication you should start your own github oauth application ( [Developer settings](https://github.com/settings/apps) ) and insert keys into `.env` file.
 
 ## Sending mail
 
