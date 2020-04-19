@@ -51,5 +51,25 @@
         $('body').bootstrapMaterialDesign();
     });</script>
 <script src="{{ asset('js/app.js') }}"></script>
+
+<script>
+    var fitComponentsSize = function () {
+        $('#div2').css('height', $('#div1').height() + 'px');
+    }
+
+    if ($(window).width() > 768) {
+        fitComponentsSize();
+    }
+
+    $(window).resize(function () {
+        if ($(window).width() > 768) {
+            fitComponentsSize();
+        } else {
+            $('#div2').css('height', '100%');
+        }
+
+    });
+</script>
+
 </body>
 </html>
