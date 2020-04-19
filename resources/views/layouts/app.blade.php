@@ -24,18 +24,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
-
 </head>
 <body>
 
 @include('layouts.navbar')
 
 <div id="app">
-        <div class="p-5">
-            <main>
+    <div class="p-5">
+        <main>
             @yield('content')
-            </main>
-        </div>
+        </main>
+    </div>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -54,8 +53,17 @@
 
 <script>
     var fitComponentsSize = function () {
-        $('#div2').css('height', $('#div1').height() + 'px');
+
+        $('#post-col-2').css('height', $('#post-col-1').height() + 'px');
+
+        fitCommentsBlock()
     }
+
+    var fitCommentsBlock = function () {
+
+        $('#post-comments').css('height', ($('#post-col-2').height() - $('#post-footer').height() - $('#post-header').height()) + 'px');
+    }
+
 
     if ($(window).width() > 768) {
         fitComponentsSize();
@@ -65,9 +73,11 @@
         if ($(window).width() > 768) {
             fitComponentsSize();
         } else {
-            $('#div2').css('height', '100%');
-        }
 
+            $('#post-col-2').css('height', '100%');
+            $('#post-comments').css('height', '100%');
+            fitCommentsBlock();
+        }
     });
 </script>
 
