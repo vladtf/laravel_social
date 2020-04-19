@@ -1,64 +1,85 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container p-2" style="background-color: rgba(139, 188, 232, 0.34)">
+    <div class="container p-2"
+         style="background-color: rgba(139, 188, 232, 0.34); box-shadow: 0 0 0 1px rgba(255,255,255,0.76)">
         <div class="row p-2">
+
+            {{-- Post image --}}
             <div class="col-md-8 p-2">
                 <img src="/storage/{{$post->image}}" class="img-fluid" id="post-col-1">
             </div>
+            {{-- End Post image --}}
+
+            {{-- post body --}}
             <div class="col-md-4 p-2">
                 <div class="container" id="post-col-2">
-                    <div id="post-header">
-                        <div class="row">
-                            <div>
-                                <a href="/profile/{{ $post->user->id }}" class="font-weight-bold text-dark"
-                                   style="text-decoration: none;">
-                                    <img src="{{ $post->user->profile->profileImage() }}" class="rounded-circle"
-                                         style="max-width: 50px">
+
+                    {{-- Header --}}
+                    <div class="row" id="post-header">
+                        <div class="container">
+                            <div class="row align-items-center justify-content-around">
+                                <div class="col-6">
+                                    <a href="/profile/{{ $post->user->id }}" class="font-weight-bold text-dark"
+                                       style="text-decoration: none;">
+                                        <img src="{{ $post->user->profile->profileImage() }}"
+                                             class="rounded-circle w-50">
+                                        {{ $post->user->username }}
+                                    </a>
+                                </div>
+                                <div class="col-6">
+                                    <follow-button user-id="{{$post->user->id}}"
+                                                   follows="{{ auth()->user()->follows }}">
+                                    </follow-button>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row px-3 pb-1">
+                                <small class="text-dark">{{ $post->created_at->format('d-m-y')}} </small>
+                            </div>
+                            <div class="row px-2">
+                                <a class="px-2" href="/profile/{{ $post->user->id }}">
                                     {{ $post->user->username }}
                                 </a>
+                                <p class="px-2">
+                                    {{ $post->caption }}
+                                </p>
                             </div>
-                            <follow-button user-id="{{$post->user->id}}"
-                                           follows="{{ auth()->user()->follows }}"></follow-button>
+                            <hr>
+                            <div class="row px-3">
+                                <div class=""><strong>{{$post->comments->count()}}</strong> comments</div>
+                            </div>
                         </div>
-
-                        <hr/>
-
-                        <div>
-                            <small style="color: #2c7036;">{{ $post->created_at->format('d-m-y')}}</small>
-                            <p><span class="font-weight-bold">
-                        <a class="" href="/profile/{{ $post->user->id }}">
-                            <span class="text-dark">{{ $post->user->username }}</span>
-                        </a>
-                    </span>{{ $post->caption }}
-                            </p>
-                            <div class=""><strong>{{$post->comments->count()}}</strong> comments</div>
-                        </div>
-
-                        <hr/>
                     </div>
-                    <!-- Comments -->
-                    <div class="list-group overflow-auto" id="post-comments">
+                {{-- End header --}}
+
+                <!-- Comments -->
+                    <div class="row d-block list-group overflow-auto" id="post-comments"
+                         style="background: rgba(174,206,236,0.11); color: #1e433a">
                         @foreach($post->comments as $comment)
                             <li class="list-group-item">
                                 <p class="pt-2">{{$comment->comment}}</p>
                             </li>
                         @endforeach
                     </div>
+                    <!-- End comments -->
 
-                    <div id="post-footer">
-                        <form action="/comment/{{$post->id}}" method="post">
+                    <!-- Footer -->
+                    <div class="row p-2" id="post-footer">
+                        <form action="/comment/{{$post->id}}" method="post" class="text-center w-100" style="border: 1px rgba(160,208,173,0.05) solid;">
                             @csrf
-
                             <input id="comment" type="text"
-                                   class="form-control mb-4" name="comment"
+                                   class="form-control" name="comment"
                                    value="{{ old('comment') }}" placeholder="Comment ..." required
                                    autocomplete="comment"/>
-                            <button class="btn btn-info btn-block my-4" type="submit">Add comment</button>
+                            <button class="btn btn-info" type="submit">Add comment</button>
                         </form>
                     </div>
+                    <!-- End footer -->
                 </div>
+                <!-- End Post Body -->
             </div>
+            {{-- End post image --}}
         </div>
     </div>
     </div>

@@ -65,12 +65,12 @@
     }
 
 
-    if ($(window).width() > 768) {
+    if ($(window).width() >= 750) {
         fitComponentsSize();
     }
 
     $(window).resize(function () {
-        if ($(window).width() > 768) {
+        if ($(window).width() >= 700) {
             fitComponentsSize();
         } else {
 
