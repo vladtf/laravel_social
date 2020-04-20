@@ -10921,3 +10921,16 @@ body {
   outline: 1px solid rgba(177, 229, 218, 0.39);
 }
 
+body::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(58, 126, 90, 0.13);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #3a6d974f;
+  outline: 1px solid slategrey;
+}
+
