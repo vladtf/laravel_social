@@ -38,11 +38,12 @@
         </div>
         <div class="row pt-5">
             @foreach($user->posts as $post)
-                <div class="col-md-4 p-4">
-                    <a href="/p/{{$post->id}}">
-                        <img src="/storage/{{$post->image}}" class="w-100" alt="">
-                    </a>
-
+                <div class="col-md-4 p-4 ">
+                    <div class="profile-post-style">
+                        <a href="/p/{{$post->id}}">
+                            <img src="/storage/{{$post->image}}" class="w-100" alt="">
+                        </a>
+                    </div>
 
                     {{--                    CSS Squaring--}}
                     {{--                    <div class="square"--}}

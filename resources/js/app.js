@@ -31,3 +31,32 @@ Vue.component('follow-button', require('./components/follow-button.vue').default
 const app = new Vue({
     el: '#app',
 });
+
+
+
+// Post Page Resizing
+var fitComponentsSize = function () {
+
+    $('#post-col-2').css('height', $('#post-col-1').height() + 'px');
+
+    fitCommentsBlock()
+}
+var fitCommentsBlock = function () {
+
+    $('#post-comments').css('height', ($('#post-col-2').height() - $('#post-footer').height() - $('#post-header').height()) + 'px');
+}
+
+if ($(window).width() >= 768) {
+    fitComponentsSize();
+}
+
+$(window).resize(function () {
+    if ($(window).width() >= 768) {
+        fitComponentsSize();
+    } else {
+
+        $('#post-col-2').css('height', '100%');
+        $('#post-comments').css('height', '100%');
+        fitCommentsBlock();
+    }
+});

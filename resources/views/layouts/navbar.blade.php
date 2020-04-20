@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md shadow-sm navbar-style navbar-light">
-    <div class="container pt-2">
-        <a class="navbar-brand d-flex" href="{{ url('/') }}">
+    <div class="container">
+        <a class="navbar-brand d-flex pb-2" href="{{ url('/') }}">
             <div><img src="/svg/laravelSocialLogo.svg" class="pr-3"
                       style="height: 20px; border-right: 1px solid #e2e3e5;"></div>
             <div class="pl-3">Home</div>
@@ -48,7 +48,6 @@
                                                      document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}
                             </a>
-
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                 @csrf
                             </form>

@@ -51,35 +51,5 @@
     });</script>
 <script src="{{ asset('js/app.js') }}"></script>
 
-<script>
-    var fitComponentsSize = function () {
-
-        $('#post-col-2').css('height', $('#post-col-1').height() + 'px');
-
-        fitCommentsBlock()
-    }
-
-    var fitCommentsBlock = function () {
-
-        $('#post-comments').css('height', ($('#post-col-2').height() - $('#post-footer').height() - $('#post-header').height()) + 'px');
-    }
-
-
-    if ($(window).width() >= 750) {
-        fitComponentsSize();
-    }
-
-    $(window).resize(function () {
-        if ($(window).width() >= 700) {
-            fitComponentsSize();
-        } else {
-
-            $('#post-col-2').css('height', '100%');
-            $('#post-comments').css('height', '100%');
-            fitCommentsBlock();
-        }
-    });
-</script>
-
 </body>
 </html>
