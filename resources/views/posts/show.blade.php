@@ -54,19 +54,25 @@
                 {{-- End header --}}
 
                 <!-- Comments -->
-                    <div class="row d-block list-group overflow-auto" id="post-comments"
-                         style="background: rgba(174,206,236,0.11); color: #1e433a">
+                    <div class="row d-block list-group overflow-auto comment-block" id="post-comments"
+                         style="background: rgba(174,206,236,0.11); color: #1e433a;">
                         @foreach($post->comments as $comment)
-                            <li class="list-group-item">
-                                <p class="pt-2">{{$comment->comment}}</p>
-                            </li>
+                            <a href="/profile/{{$comment->user->id}}"
+                               class="list-group-item list-group-item-action flex-column align-items-start border-bottom border-primary">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">{{$comment->user->name}}</h5>
+                                    <small>{{$comment->created_at->diffForHumans()}}</small>
+                                </div>
+                                <p class="mb-1">{{$comment->comment}}</p>
+                            </a>
                         @endforeach
                     </div>
                     <!-- End comments -->
 
                     <!-- Footer -->
                     <div class="row p-2" id="post-footer">
-                        <form action="/comment/{{$post->id}}" method="post" class="text-center w-100" style="border: 1px rgba(160,208,173,0.05) solid;">
+                        <form action="/comment/{{$post->id}}" method="post" class="text-center w-100"
+                              style="border: 1px rgba(160,208,173,0.05) solid;">
                             @csrf
                             <input id="comment" type="text"
                                    class="form-control" name="comment"

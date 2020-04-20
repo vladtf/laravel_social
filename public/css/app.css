@@ -10908,13 +10908,16 @@ body {
   box-shadow: 0 0 0 1px rgba(171, 144, 76, 0.76);
 }
 
-.comments-block {
-  background-color: transparent;
-  overflow-y: scroll;
-  scroll-behavior: smooth;
+.comment-block::-webkit-scrollbar {
+  width: 0.5em;
 }
 
-.comments-block::-webkit-scrollbar {
-  display: none;
+.comment-block::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(100, 158, 193, 0.24);
+}
+
+.comment-block::-webkit-scrollbar-thumb {
+  background-color: rgba(163, 255, 148, 0.21);
+  outline: 1px solid rgba(177, 229, 218, 0.39);
 }
 
