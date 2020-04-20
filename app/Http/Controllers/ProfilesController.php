@@ -36,7 +36,6 @@ class ProfilesController extends Controller
 
         $followingCount = $user->getFollowingCount();
 
-
         return view('profiles.show', compact('user', 'follows', 'postsCount', 'followersCount', 'followingCount'));
     }
 
