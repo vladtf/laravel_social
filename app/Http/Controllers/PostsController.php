@@ -9,7 +9,7 @@ class PostsController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth', ['except'=>['show']]);
     }
 
     public function index()
@@ -25,7 +25,9 @@ class PostsController extends Controller
 
     public function show(Post $post)
     {
-        return view('posts.show', compact('post'));
+        $user = $post->user();
+        $follows = (auth()->user()) ? auth()->user()->following->contains($user->id) : false;
+        return view('posts.show', compact('post','follows'));
     }
 
     public function create()

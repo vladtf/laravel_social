@@ -29,7 +29,7 @@
                                 </div>
                                 <div class="col-6">
                                     <follow-button user-id="{{$post->user->id}}"
-                                                   follows="{{ auth()->user()->follows }}">
+                                                   follows="{{ $follows }}">
                                     </follow-button>
                                 </div>
                             </div>
