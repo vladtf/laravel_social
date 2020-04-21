@@ -9,10 +9,11 @@
         @else
             @foreach($posts as $post)
                 <div class="container post-style p-4 mt-2">
-                    <div class="row pb-1">
-                        <a class="" href="/profile/{{ $post->user->id }}">
+                    <div class="row pb-1 align-items-baseline">
+                        <a class="col" href="/profile/{{ $post->user->id }}">
                             <span class="text-dark"><strong>{{ $post->user->username }}</strong></span>
                         </a>
+                        <small>{{$post->created_at->diffForHumans()}}</small>
                     </div>
                     <div class="row">
                         <a href="/p/{{$post->id}}">
