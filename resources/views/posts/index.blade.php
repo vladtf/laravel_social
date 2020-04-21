@@ -8,7 +8,7 @@
             </a>
         @else
             @foreach($posts as $post)
-                <div class="container post-style p-4 mt-2">
+                <div class="container post-style p-4 mt-2 post-index-style">
                     <div class="row pb-1 align-items-baseline">
                         <a class="col" href="/profile/{{ $post->user->id }}">
                             <span class="text-dark"><strong>{{ $post->user->username }}</strong></span>

@@ -10934,7 +10934,8 @@ body::-webkit-scrollbar-thumb {
   outline: 1px solid slategrey;
 }
 
-.profile-post-style {
+.profile-post-style,
+.post-index-style {
   box-shadow: 9px -8px 21px -4px #77a0ab;
 }
 

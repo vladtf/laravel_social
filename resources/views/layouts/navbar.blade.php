@@ -13,13 +13,17 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    @auth
+                @auth
+                    <li class="nav-item">
                         <a href="/profile/{{ auth()->id() }}" class="nav-link">My profile</a>
-                    @endauth
-                </li>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/profile/following" class="nav-link">Following</a>
+                    </li>
+                @endauth
+
                 <li class="nav-item">
-                    <a href="/profile" class="nav-link">Profiles</a>
+                    <a href="/profile" class="nav-link">Search</a>
                 </li>
             </ul>
 
