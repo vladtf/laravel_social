@@ -30,7 +30,7 @@
 @include('layouts.navbar')
 
 <div id="app">
-    <div class="p-5">
+    <div class="p-5 animated-div">
         <main>
             @yield('content')
         </main>

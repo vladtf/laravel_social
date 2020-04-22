@@ -70,3 +70,18 @@ body::-webkit-scrollbar-thumb {
     -moz-box-shadow: 9px -8px 21px -4px rgba(119,160,171,1);
     box-shadow: 9px -8px 21px -4px rgba(119,160,171,1);
 }
+
+@keyframes appear-animation{
+    0%{
+        transform: translateY(-2%);
+        opacity: .4;
+    }
+    100%{
+        transform: rotate(0) translateY(0);
+        opacity: 1;
+    }
+}
+
+.animated-div{
+    animation: appear-animation .6s forwards 0s linear;
+}
