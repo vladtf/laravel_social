@@ -1,9 +1,10 @@
 <nav class="navbar navbar-expand-md shadow-sm navbar-style navbar-light">
     <div class="container">
         <a class="navbar-brand d-flex pb-2" href="{{ url('/') }}">
-            <div><img src="/svg/laravelSocialLogo.svg" class="pr-3"
+            <div>
+                <img src="/svg/laravelSocialLogo.svg" class="pr-3"
                       style="height: 20px; border-right: 1px solid #e2e3e5;"></div>
-            <div class="pl-3">Home</div>
+            <div class="text-light pl-3">Home</div>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -41,10 +42,10 @@
                     @endif
                 @else
 
-                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                    <div id="navbarDropdown" class="nav-link dropdown-toggle" role="button" style="cursor: pointer"
                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                         {{ Auth::user()->username }} <span class="caret"></span>
-                    </a>
+                    </div>
                     <li class="nav-item dropdown">
                         <div class="dropdown-menu dropdown-menu-right p-2" style="background-color: rgba(38,102,62,0.21);" aria-labelledby="navbarDropdown">
                             <a href="{{route('profile.show',['user'=>auth()->id()])}}"

@@ -10963,6 +10963,28 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
+@-webkit-keyframes disappear-animation {
+  0% {
+    transform: rotate(0) translateY(0);
+  }
+
+  100% {
+    transform: rotate(0) translateY(8%);
+    opacity: 0;
+  }
+}
+
+@keyframes disappear-animation {
+  0% {
+    transform: rotate(0) translateY(0);
+  }
+
+  100% {
+    transform: rotate(0) translateY(8%);
+    opacity: 0;
+  }
+}
+
 .animated-div {
   -webkit-animation: appear-animation 0.6s forwards 0s linear;
           animation: appear-animation 0.6s forwards 0s linear;

@@ -33,7 +33,6 @@ const app = new Vue({
 });
 
 
-
 // Post Page Resizing
 var fitComponentsSize = function () {
 
@@ -59,4 +58,19 @@ $(window).resize(function () {
         $('#post-comments').css('height', '100%');
         fitCommentsBlock();
     }
+});
+
+$('a').click(function () {
+    var href = $(this).attr("href");
+
+    var animDuration = 600;
+
+    // Do animation here; duration = animDuration.
+    $('#content').css('animation','disappear-animation .6s forwards 0s linear');
+
+    setTimeout(function () {
+        window.location = href;
+    }, animDuration);
+
+    return false; // prevent user navigation away until animation's finished
 });
