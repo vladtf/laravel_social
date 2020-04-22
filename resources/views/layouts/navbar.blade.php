@@ -46,7 +46,7 @@
                         {{ Auth::user()->username }} <span class="caret"></span>
                     </a>
                     <li class="nav-item dropdown">
-                        <div class="dropdown-menu dropdown-menu-right p-2" aria-labelledby="navbarDropdown">
+                        <div class="dropdown-menu dropdown-menu-right p-2" style="background-color: rgba(38,102,62,0.21);" aria-labelledby="navbarDropdown">
                             <a href="{{route('profile.show',['user'=>auth()->id()])}}"
                                class="dropdown-item">
                                 My Profile
@@ -61,6 +61,7 @@
                             </a>
 
                             <div class="dropdown-divider"></div>
+
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}

@@ -10968,3 +10968,12 @@ body::-webkit-scrollbar-thumb {
           animation: appear-animation 0.6s forwards 0s linear;
 }
 
+.dropdown-item {
+  border-radius: 0.4em;
+}
+
+.dropdown-item:hover {
+  color: white !important;
+  background-color: rgba(40, 86, 61, 0.34) !important;
+}
+
