@@ -1,22 +1,15 @@
-<div class="wrapper">
-    <!-- Sidebar -->
-    <nav id="sidebar">
-        <div class="sidebar-header">
-            <h3>Laravel Social</h3>
-        </div>
+<div class="sidebar">
+    <header>Laravel Social</header>
 
-        <ul class="list-unstyled components">
-            <p>Dummy Heading</p>
-            <li>
-                <a href="{{route('post.index')}}">Home</a>
-            </li>
-            <li>
-                <a href="{{route('profile.show',['user'=>auth()->user()])}}">My profile</a>
-            </li>
-            <li>
-                <a href="{{route('profile.index')}}">Search</a>
-            </li>
-        </ul>
-    </nav>
-
+    <ul class="list-unstyled components">
+        <li>
+            <a href="{{route('post.index')}}">Home</a>
+        </li>
+        <li>
+            <a href="{{route('profile.show',['user'=>auth()->user()])}}">My profile</a>
+        </li>
+        <li>
+            <a href="{{route('profile.index')}}">Search</a>
+        </li>
+    </ul>
 </div>

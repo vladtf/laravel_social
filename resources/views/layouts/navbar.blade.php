@@ -1,11 +1,13 @@
 <nav class="navbar navbar-expand-md shadow-sm navbar-style navbar-light">
-    <div class="container">
+    <div class="container-fluid">
+
         <a class="navbar-brand d-flex pb-2" href="{{ url('/') }}">
             <div>
                 <img src="/svg/laravelSocialLogo.svg" class="pr-3"
                       style="height: 20px; border-right: 1px solid #e2e3e5;"></div>
             <div class="text-light pl-3">Home</div>
         </a>
+
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
             <span class="navbar-toggler-icon text-light"></span>
