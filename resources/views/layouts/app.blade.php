@@ -28,6 +28,7 @@
 <body>
 
 @include('layouts.navbar')
+@include('layouts.sidebar')
 
 <div id="app">
     <div class="p-5 animated-div" id="content">
