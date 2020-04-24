@@ -18,7 +18,9 @@ body {
     background-size: cover;
     -o-background-size: cover;
 }
-
+.app-content{
+    transition: all .5s ease;
+}
 .square {
     width: 100%;
     padding-bottom: 100%;

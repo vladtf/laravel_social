@@ -1,22 +1,26 @@
 .sidebar {
     position: fixed;
+    left: -250px;
     width: 250px;
     height: 100%;
     background: rgba(84, 152, 125, 0.3);
     transition: all .5s ease;
 }
+
 .sidebar-toggle{
     padding-right: 4em;
     cursor: pointer;
 }
-
+#sidebar-check{
+    display: none;
+}
 .sidebar header {
     font-size: 22px;
     text-align: center;
     line-height: 70px;
     background-color: rgba(84, 152, 125, 0.56);
     user-select: none;
-    transition: all .5s linear;
+    transition: all .5s ease;
 }
 
 .sidebar header a {
@@ -51,5 +55,9 @@
 }
 
 #sidebar-check:checked ~ .sidebar{
-    left: -250px;
+    left: 0;
+}
+
+#sidebar-check:checked ~ .app-content{
+    margin-left: 250px;
 }

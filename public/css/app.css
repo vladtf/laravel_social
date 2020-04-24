@@ -10879,6 +10879,7 @@ a.text-dark:focus {
 
 .sidebar {
   position: fixed;
+  left: -250px;
   width: 250px;
   height: 100%;
   background: rgba(84, 152, 125, 0.3);
@@ -10890,6 +10891,10 @@ a.text-dark:focus {
   cursor: pointer;
 }
 
+#sidebar-check {
+  display: none;
+}
+
 .sidebar header {
   font-size: 22px;
   text-align: center;
@@ -10899,7 +10904,7 @@ a.text-dark:focus {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  transition: all 0.5s linear;
+  transition: all 0.5s ease;
 }
 
 .sidebar header a {
@@ -10934,7 +10939,11 @@ a.text-dark:focus {
 }
 
 #sidebar-check:checked ~ .sidebar {
-  left: -250px;
+  left: 0;
+}
+
+#sidebar-check:checked ~ .app-content {
+  margin-left: 250px;
 }
 
 .profile-post-style,
@@ -10965,6 +10974,10 @@ body {
   background: url("/background/background.jpg") no-repeat center center fixed;
   background-size: cover;
   -o-background-size: cover;
+}
+
+.app-content {
+  transition: all 0.5s ease;
 }
 
 .square {
