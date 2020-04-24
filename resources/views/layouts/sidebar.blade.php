@@ -1,5 +1,7 @@
 <div class="sidebar" id="sidebar">
-    <header>Laravel Social</header>
+    <header>
+        <a href="{{route('post.index')}}">Laravel Social</a>
+    </header>
 
     <ul class="list-unstyled components">
         @auth

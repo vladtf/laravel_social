@@ -11009,20 +11009,24 @@ body::-webkit-scrollbar-thumb {
   position: fixed;
   width: 250px;
   height: 100%;
-  background: rgba(81, 175, 198, 0.36);
+  background: rgba(84, 152, 125, 0.3);
   transition: all 0.5s ease;
 }
 
 .sidebar header {
   font-size: 22px;
-  color: white;
   text-align: center;
   line-height: 70px;
-  background: #16a271;
+  background-color: rgba(84, 152, 125, 0.56);
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  transition: all 0.5s linear;
+}
+
+.sidebar header a {
+  color: white;
 }
 
 .sidebar ul a {
@@ -11039,8 +11043,13 @@ body::-webkit-scrollbar-thumb {
   transition: 0.4s;
 }
 
-ul li:hover a {
+.sidebar ul li:hover a {
   padding-left: 50px;
+}
+
+.sidebar header:hover {
+  background-color: #54987d;
+  font-size: 26px;
 }
 
 .sidebar ul a i {
