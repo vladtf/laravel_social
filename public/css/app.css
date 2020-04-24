@@ -10885,6 +10885,11 @@ a.text-dark:focus {
   transition: all 0.5s ease;
 }
 
+.sidebar-toggle {
+  padding-right: 4em;
+  cursor: pointer;
+}
+
 .sidebar header {
   font-size: 22px;
   text-align: center;
@@ -10926,6 +10931,10 @@ a.text-dark:focus {
 
 .sidebar ul a i {
   margin-right: 30px;
+}
+
+#sidebar-check:checked ~ .sidebar {
+  left: -250px;
 }
 
 .profile-post-style,
