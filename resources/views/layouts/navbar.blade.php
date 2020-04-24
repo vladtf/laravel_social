@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md shadow-sm navbar-style navbar-light">
+<nav class="navbar navbar-expand-md shadow-sm navbar-style navbar-light fixed-top" id="navbar">
     <div class="container-fluid">
 
         <a class="navbar-brand d-flex pb-2" href="{{ url('/') }}">

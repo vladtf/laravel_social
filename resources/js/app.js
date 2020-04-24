@@ -66,7 +66,7 @@ $('a').click(function () {
     var animDuration = 600;
 
     // Do animation here; duration = animDuration.
-    $('#content').css('animation','disappear-animation .6s forwards 0s linear');
+    $('#content').css('animation', 'disappear-animation .6s forwards 0s linear');
 
     setTimeout(function () {
         window.location = href;
@@ -74,3 +74,6 @@ $('a').click(function () {
 
     return false; // prevent user navigation away until animation's finished
 });
+
+$('#sidebar').css({"top":$('nav').outerHeight(true)});
+

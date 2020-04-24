@@ -14640,6 +14640,9 @@ $('a').click(function () {
   }, animDuration);
   return false; // prevent user navigation away until animation's finished
 });
+$('#sidebar').css({
+  "top": $('nav').outerHeight(true)
+});
 
 /***/ }),
 

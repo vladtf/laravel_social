@@ -1,4 +1,4 @@
-<div class="sidebar">
+<div class="sidebar" id="sidebar">
     <header>Laravel Social</header>
 
     <ul class="list-unstyled components">
