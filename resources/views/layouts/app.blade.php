@@ -29,8 +29,7 @@
 
 @include('layouts.navbar')
 @include('layouts.sidebar')
-
-<div id="app">
+<div id="app" style="margin-left: 250px">
     <div class="p-5 animated-div" id="content">
         <main>
             @yield('content')
