@@ -7,6 +7,10 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+// Custom
+@import "sidebar";
+@import "post-page";
+
 body {
     background: url('/background/background.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -14,6 +18,7 @@ body {
     background-size: cover;
     -o-background-size: cover;
 }
+
 .square {
     width: 100%;
     padding-bottom: 100%;
@@ -25,32 +30,14 @@ body {
     background-color: #cf9f30;
 }
 
-.navbar-style{
+.navbar-style {
     background-color: rgba(84, 152, 125, 0.56);
 }
 
-.nav-link{
+.nav-link {
     color: rgba(255, 255, 255, 0.68);
 }
 
-.post-style{
-    background-color: rgba(122, 151, 110, 0.27);
-    border-radius: 1em;
-    box-shadow: 0 0 0 1px rgba(171, 144, 76, 0.76);
-}
-
-.comment-block::-webkit-scrollbar {
-    width: 0.5em;
-}
-
-.comment-block::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 6px rgba(100, 158, 193, 0.24);
-}
-
-.comment-block::-webkit-scrollbar-thumb {
-    background-color: rgba(163, 255, 148, 0.21);
-    outline: 1px solid rgba(177, 229, 218, 0.39);
-}
 
 body::-webkit-scrollbar {
     width: 0.5em;
@@ -65,95 +52,37 @@ body::-webkit-scrollbar-thumb {
     outline: 1px solid slategrey;
 }
 
-.profile-post-style, .post-index-style{
-    -webkit-box-shadow: 9px -8px 21px -4px rgba(119,160,171,1);
-    -moz-box-shadow: 9px -8px 21px -4px rgba(119,160,171,1);
-    box-shadow: 9px -8px 21px -4px rgba(119,160,171,1);
-}
-
-@keyframes appear-animation{
-    0%{
+@keyframes appear-animation {
+    0% {
         transform: translateY(-2%);
         opacity: .4;
     }
-    100%{
+    100% {
         transform: rotate(0) translateY(0);
         opacity: 1;
     }
 }
 
-@keyframes disappear-animation{
-    0%{
+@keyframes disappear-animation {
+    0% {
         transform: rotate(0) translateY(0);
     }
-    100%{
+    100% {
         transform: rotate(0) translateY(+8%);
         opacity: 0;
     }
 }
 
-.animated-div{
+.animated-div {
     animation: appear-animation .6s forwards 0s linear;
 }
 
-.dropdown-item{
+.dropdown-item {
     border-radius: .4em;
 }
 
-.dropdown-item:hover{
+.dropdown-item:hover {
     color: white !important;
     background-color: rgba(40, 86, 61, 0.34) !important;
 }
 
-.wrapper {
-    display: flex;
-    width: 100%;
-    align-items: stretch;
-}
-
-.sidebar{
-    position: fixed;
-    width: 250px;
-    height: 100%;
-    background: rgba(84, 152, 125, 0.3);
-    transition: all .5s ease;
-}
-
-.sidebar header{
-    font-size: 22px;
-    text-align: center;
-    line-height: 70px;
-    background-color: rgba(84, 152, 125, 0.56);
-    user-select: none;
-    transition: all .5s linear;
-}
-.sidebar header a{
-    color: white;
-}
-
-.sidebar ul a{
-    display: block;
-    height: 100%;
-    width: 100%;
-    line-height: 65px;
-    font-size: 20px;
-    color: white;
-    padding-left: 40px;
-    box-sizing: border-box;
-    border-top: 1px solid rgba(255, 255, 255, 0.14);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.14);
-    transition: .4s;
-}
-
-.sidebar ul li:hover a{
-    padding-left: 50px;
-}
-
-.sidebar header:hover{
-    background-color: rgb(84, 152, 125);
-    font-size: 26px;
-}
-
-.sidebar ul a i{
-    margin-right: 30px;
-}

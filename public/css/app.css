@@ -10877,6 +10877,81 @@ a.text-dark:focus {
   }
 }
 
+.sidebar {
+  position: fixed;
+  width: 250px;
+  height: 100%;
+  background: rgba(84, 152, 125, 0.3);
+  transition: all 0.5s ease;
+}
+
+.sidebar header {
+  font-size: 22px;
+  text-align: center;
+  line-height: 70px;
+  background-color: rgba(84, 152, 125, 0.56);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  transition: all 0.5s linear;
+}
+
+.sidebar header a {
+  color: white;
+}
+
+.sidebar ul a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 65px;
+  font-size: 20px;
+  color: white;
+  padding-left: 40px;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.14);
+  transition: 0.4s;
+}
+
+.sidebar ul li:hover a {
+  padding-left: 50px;
+}
+
+.sidebar header:hover {
+  background-color: #54987d;
+  font-size: 26px;
+}
+
+.sidebar ul a i {
+  margin-right: 30px;
+}
+
+.profile-post-style,
+.post-index-style {
+  box-shadow: 9px -8px 21px -4px #77a0ab;
+}
+
+.post-style {
+  background-color: rgba(122, 151, 110, 0.27);
+  border-radius: 1em;
+  box-shadow: 0 0 0 1px rgba(171, 144, 76, 0.76);
+}
+
+.comment-block::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+.comment-block::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(100, 158, 193, 0.24);
+}
+
+.comment-block::-webkit-scrollbar-thumb {
+  background-color: rgba(163, 255, 148, 0.21);
+  outline: 1px solid rgba(177, 229, 218, 0.39);
+}
+
 body {
   background: url("/background/background.jpg") no-repeat center center fixed;
   background-size: cover;
@@ -10902,25 +10977,6 @@ body {
   color: rgba(255, 255, 255, 0.68);
 }
 
-.post-style {
-  background-color: rgba(122, 151, 110, 0.27);
-  border-radius: 1em;
-  box-shadow: 0 0 0 1px rgba(171, 144, 76, 0.76);
-}
-
-.comment-block::-webkit-scrollbar {
-  width: 0.5em;
-}
-
-.comment-block::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 6px rgba(100, 158, 193, 0.24);
-}
-
-.comment-block::-webkit-scrollbar-thumb {
-  background-color: rgba(163, 255, 148, 0.21);
-  outline: 1px solid rgba(177, 229, 218, 0.39);
-}
-
 body::-webkit-scrollbar {
   width: 0.5em;
 }
@@ -10932,11 +10988,6 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background-color: #3a6d974f;
   outline: 1px solid slategrey;
-}
-
-.profile-post-style,
-.post-index-style {
-  box-shadow: 9px -8px 21px -4px #77a0ab;
 }
 
 @-webkit-keyframes appear-animation {
@@ -10997,62 +11048,5 @@ body::-webkit-scrollbar-thumb {
 .dropdown-item:hover {
   color: white !important;
   background-color: rgba(40, 86, 61, 0.34) !important;
-}
-
-.wrapper {
-  display: flex;
-  width: 100%;
-  align-items: stretch;
-}
-
-.sidebar {
-  position: fixed;
-  width: 250px;
-  height: 100%;
-  background: rgba(84, 152, 125, 0.3);
-  transition: all 0.5s ease;
-}
-
-.sidebar header {
-  font-size: 22px;
-  text-align: center;
-  line-height: 70px;
-  background-color: rgba(84, 152, 125, 0.56);
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  transition: all 0.5s linear;
-}
-
-.sidebar header a {
-  color: white;
-}
-
-.sidebar ul a {
-  display: block;
-  height: 100%;
-  width: 100%;
-  line-height: 65px;
-  font-size: 20px;
-  color: white;
-  padding-left: 40px;
-  box-sizing: border-box;
-  border-top: 1px solid rgba(255, 255, 255, 0.14);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.14);
-  transition: 0.4s;
-}
-
-.sidebar ul li:hover a {
-  padding-left: 50px;
-}
-
-.sidebar header:hover {
-  background-color: #54987d;
-  font-size: 26px;
-}
-
-.sidebar ul a i {
-  margin-right: 30px;
 }
 
