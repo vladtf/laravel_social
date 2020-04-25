@@ -1,6 +1,6 @@
 .sidebar {
     position: fixed;
-    left: -250px;
+    left: -170px;
     width: 250px;
     height: 100%;
     background: rgba(84, 152, 125, 0.3);
@@ -21,6 +21,10 @@
     background-color: rgba(84, 152, 125, 0.56);
     user-select: none;
     transition: all .5s ease;
+
+    img{
+        margin-right: 10px;
+    }
 }
 
 .sidebar header a {
@@ -60,5 +64,5 @@
 }
 
 #sidebar-check:checked ~ .app-content{
-    margin-left: 250px;
+    margin-left: 170px;
 }

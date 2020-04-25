@@ -10879,7 +10879,7 @@ a.text-dark:focus {
 
 .sidebar {
   position: fixed;
-  left: -250px;
+  left: -170px;
   width: 250px;
   height: 100%;
   background: rgba(84, 152, 125, 0.3);
@@ -10905,6 +10905,10 @@ a.text-dark:focus {
       -ms-user-select: none;
           user-select: none;
   transition: all 0.5s ease;
+}
+
+.sidebar header img {
+  margin-right: 10px;
 }
 
 .sidebar header a {
@@ -10944,7 +10948,7 @@ a.text-dark:focus {
 }
 
 #sidebar-check:checked ~ .app-content {
-  margin-left: 250px;
+  margin-left: 170px;
 }
 
 .profile-post-style,
@@ -10979,6 +10983,7 @@ body {
 
 .app-content {
   transition: all 0.5s ease;
+  margin-left: 80px;
 }
 
 .square {
