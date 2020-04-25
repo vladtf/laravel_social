@@ -80,6 +80,7 @@ $('#sidebar').css({"top": $('nav').outerHeight(true)});
 document.addEventListener("DOMContentLoaded", function (event) {
     const _sidebar_toggle_btn = document.getElementById('sidebar-toggle')
     const _sidebar_check = document.getElementById('sidebar-check')
+
     _sidebar_toggle_btn.addEventListener('click', function (event) {
         console.log('toggle sidebar')
         _sidebar_check.checked = !_sidebar_check.checked;

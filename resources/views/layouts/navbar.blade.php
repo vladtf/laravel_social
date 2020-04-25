@@ -1,11 +1,12 @@
 <nav class="navbar navbar-expand-md shadow-sm navbar-style navbar-light fixed-top" id="navbar">
-    <div class="container">
-        <i class="navbar-toggler-icon sidebar-toggle" id="sidebar-toggle"></i>
 
+    <i class="navbar-toggler-icon sidebar-toggle float-left" id="sidebar-toggle"></i>
+
+    <div class="container">
         <a class="navbar-brand d-flex pb-2" href="{{ url('/') }}">
             <div>
                 <img src="/svg/laravelSocialLogo.svg" class="pr-3"
-                      style="height: 20px; border-right: 1px solid #e2e3e5;">
+                     style="height: 20px; border-right: 1px solid #e2e3e5;">
             </div>
             <div class="text-light pl-3">Home</div>
         </a>
@@ -17,6 +18,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto">
+
                 @auth
                     <li class="nav-item">
                         <a href="/profile/{{ auth()->id() }}" class="nav-link">My profile</a>
@@ -46,11 +48,12 @@
                 @else
 
                     <div id="navbarDropdown" class="nav-link dropdown-toggle" role="button" style="cursor: pointer"
-                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                         {{ Auth::user()->username }} <span class="caret"></span>
                     </div>
                     <li class="nav-item dropdown">
-                        <div class="dropdown-menu dropdown-menu-right p-2" style="background-color: rgba(38,102,62,0.21);" aria-labelledby="navbarDropdown">
+                        <div class="dropdown-menu dropdown-menu-right p-2"
+                             style="background-color: rgba(38,102,62,0.21);" aria-labelledby="navbarDropdown">
                             <a href="{{route('profile.show',['user'=>auth()->id()])}}"
                                class="dropdown-item">
                                 My Profile
