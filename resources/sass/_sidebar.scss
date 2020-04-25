@@ -28,7 +28,8 @@
 }
 
 .sidebar ul a {
-    display: block;
+    display: inline-block;
+    justify-content: space-between;
     height: 100%;
     width: 100%;
     line-height: 65px;
