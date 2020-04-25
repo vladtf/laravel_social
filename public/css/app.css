@@ -10930,17 +10930,25 @@ a.text-dark:focus {
   transition: 0.4s;
 }
 
+.sidebar ul a i {
+  transition: 0.4s;
+}
+
 .sidebar ul li:hover a {
   padding-left: 50px;
 }
 
-.sidebar header:hover {
-  background-color: #54987d;
-  font-size: 26px;
+.sidebar ul li a i:hover {
+  font-size: 25px;
 }
 
 .sidebar ul a i {
   margin-right: 30px;
+}
+
+#sidebar-check:checked ~ .sidebar header:hover {
+  background-color: #54987d;
+  font-size: 26px;
 }
 
 #sidebar-check:checked ~ .sidebar {
