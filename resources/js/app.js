@@ -60,7 +60,12 @@ $(window).resize(function () {
     }
 });
 
+
+const _sidebar_check = document.getElementById('sidebar-check')
+const _sidebar_toggle_btn = document.getElementById('sidebar-toggle')
+
 $('a').click(function () {
+    _sidebar_check.checked = false;
     var href = $(this).attr("href");
 
     var animDuration = 600;
@@ -76,10 +81,9 @@ $('a').click(function () {
 });
 
 $('#sidebar').css({"top": $('nav').outerHeight(true)});
+$('#sidebar-check').checked = true;
 
 document.addEventListener("DOMContentLoaded", function (event) {
-    const _sidebar_toggle_btn = document.getElementById('sidebar-toggle')
-    const _sidebar_check = document.getElementById('sidebar-check')
 
     _sidebar_toggle_btn.addEventListener('click', function (event) {
         console.log('toggle sidebar')

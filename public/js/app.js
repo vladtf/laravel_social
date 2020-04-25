@@ -14630,7 +14630,13 @@ $(window).resize(function () {
     fitCommentsBlock();
   }
 });
+
+var _sidebar_check = document.getElementById('sidebar-check');
+
+var _sidebar_toggle_btn = document.getElementById('sidebar-toggle');
+
 $('a').click(function () {
+  _sidebar_check.checked = false;
   var href = $(this).attr("href");
   var animDuration = 600; // Do animation here; duration = animDuration.
 
@@ -14643,13 +14649,10 @@ $('a').click(function () {
 $('#sidebar').css({
   "top": $('nav').outerHeight(true)
 });
+$('#sidebar-check').checked = true;
 document.addEventListener("DOMContentLoaded", function (event) {
-  var _sidebar_toggle_btn = document.getElementById('sidebar-toggle');
-
-  var _sidebar_check = document.getElementById('sidebar-check');
-
   _sidebar_toggle_btn.addEventListener('click', function (event) {
-    console.debug('toggle sidebar');
+    console.log('toggle sidebar');
     _sidebar_check.checked = !_sidebar_check.checked;
   });
 });
