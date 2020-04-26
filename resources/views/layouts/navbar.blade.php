@@ -3,12 +3,12 @@
     <i class="navbar-toggler-icon sidebar-toggle float-left" id="sidebar-toggle"></i>
 
     <div class="container">
-        <a class="navbar-brand d-flex pb-2" href="{{ url('/') }}">
+        <a class="nav-logo" href="{{ url('/') }}" style="">
             <div>
                 <img src="/svg/laravelSocialLogo.svg" class="pr-3"
                      style="height: 20px; border-right: 1px solid #e2e3e5;">
             </div>
-            <div class="text-light pl-3">Home</div>
+            <span class="text-light pl-3">Home</span>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">

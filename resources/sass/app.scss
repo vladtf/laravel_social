@@ -18,10 +18,12 @@ body {
     background-size: cover;
     -o-background-size: cover;
 }
-.app-content{
+
+.app-content {
     transition: all .5s ease;
     margin-left: 80px;
 }
+
 .square {
     width: 100%;
     padding-bottom: 100%;
@@ -41,6 +43,11 @@ body {
     color: rgba(255, 255, 255, 0.68);
 }
 
+.nav-logo {
+    display: inline-flex;
+    padding: 0 5em 2px;
+    text-decoration: none !important;
+}
 
 body::-webkit-scrollbar {
     width: 0.5em;

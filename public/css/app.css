@@ -10879,7 +10879,7 @@ a.text-dark:focus {
 
 .sidebar {
   position: fixed;
-  left: -170px;
+  left: -175px;
   width: 250px;
   height: 100%;
   background: rgba(84, 152, 125, 0.3);
@@ -11037,6 +11037,12 @@ body {
 
 .nav-link {
   color: rgba(255, 255, 255, 0.68);
+}
+
+.nav-logo {
+  display: inline-flex;
+  padding: 0 5em 2px;
+  text-decoration: none !important;
 }
 
 body::-webkit-scrollbar {
