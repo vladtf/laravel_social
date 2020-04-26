@@ -5,10 +5,12 @@
     height: 100%;
     background: rgba(84, 152, 125, 0.3);
     transition: all .5s ease;
+    z-index: 1;
 }
 
 .sidebar-toggle {
     padding-right: 4em;
+    position: relative;
     cursor: pointer;
 }
 
@@ -47,16 +49,16 @@
     border-bottom: 1px solid rgba(0, 0, 0, 0.14);
     transition: .4s;
 
-    i{
+    i {
         transition: .4s;
     }
 }
 
-.sidebar ul li:hover a{
+.sidebar ul li:hover a {
     padding-left: 50px;
 }
 
-.sidebar ul li a i:hover{
+.sidebar ul li a i:hover {
     font-size: 25px;
 }
 
@@ -74,5 +76,27 @@
 }
 
 #sidebar-check:checked ~ .app-content {
-    margin-left: 170px;
+    margin-left: 190px;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        left: -100%;
+        background: rgba(84, 152, 125, 0.9);
+    }
+    .app-content {
+        margin-left: 0 !important;
+    }
+
+    nav {
+        background: rgba(84, 152, 125, 0.9) !important;
+
+        a,div {
+            color: white !important;
+        }
+    }
+
+    #sidebar-check:checked ~ .sidebar {
+        width: 100% !important;
+    }
 }

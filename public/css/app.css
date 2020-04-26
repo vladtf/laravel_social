@@ -10884,10 +10884,12 @@ a.text-dark:focus {
   height: 100%;
   background: rgba(84, 152, 125, 0.3);
   transition: all 0.5s ease;
+  z-index: 1;
 }
 
 .sidebar-toggle {
   padding-right: 4em;
+  position: relative;
   cursor: pointer;
 }
 
@@ -10956,7 +10958,31 @@ a.text-dark:focus {
 }
 
 #sidebar-check:checked ~ .app-content {
-  margin-left: 170px;
+  margin-left: 190px;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    left: -100%;
+    background: rgba(84, 152, 125, 0.9);
+  }
+
+  .app-content {
+    margin-left: 0 !important;
+  }
+
+  nav {
+    background: rgba(84, 152, 125, 0.9) !important;
+  }
+
+  nav a,
+  nav div {
+    color: white !important;
+  }
+
+  #sidebar-check:checked ~ .sidebar {
+    width: 100% !important;
+  }
 }
 
 .profile-post-style,
