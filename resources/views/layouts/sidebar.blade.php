@@ -1,10 +1,12 @@
 <div class="sidebar" id="sidebar" >
-    <header class="p-3">
-        <a href="{{route('post.index')}}" class="d-flex justify-content-between align-items-center">
-            Laravel Social
-            <img src="/svg/laravelSocialLogo.svg" style="max-width: 10%;"/>
-        </a>
-    </header>
+
+{{--    --}}
+{{--    <header class="p-3">--}}
+{{--        <a href="{{route('post.index')}}" class="d-flex justify-content-between align-items-center">--}}
+{{--            Laravel Social--}}
+{{--            <img src="/svg/laravelSocialLogo.svg" style="max-width: 10%;"/>--}}
+{{--        </a>--}}
+{{--    </header>--}}
 
     <ul class="list-unstyled">
         @auth

@@ -10887,6 +10887,10 @@ a.text-dark:focus {
   z-index: 1;
 }
 
+.sidebar a {
+  text-decoration: none !important;
+}
+
 .sidebar-toggle {
   padding-right: 4em;
   position: relative;
@@ -11043,6 +11047,10 @@ body {
   display: inline-flex;
   padding: 0 5em 2px;
   text-decoration: none !important;
+}
+
+nav a {
+  color: white !important;
 }
 
 body::-webkit-scrollbar {
