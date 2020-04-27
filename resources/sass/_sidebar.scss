@@ -21,23 +21,23 @@
 #sidebar-check {
     display: none;
 }
-
-.sidebar header {
-    font-size: 22px;
-    text-align: center;
-    line-height: 70px;
-    background-color: rgba(84, 152, 125, 0.56);
-    user-select: none;
-    transition: all .5s ease;
-
-    img {
-        margin-right: 10px;
-    }
-}
-
-.sidebar header a {
-    color: white;
-}
+//
+//.sidebar header {
+//    font-size: 22px;
+//    text-align: center;
+//    line-height: 70px;
+//    background-color: rgba(84, 152, 125, 0.56);
+//    user-select: none;
+//    transition: all .5s ease;
+//
+//    img {
+//        margin-right: 10px;
+//    }
+//}
+//
+//.sidebar header a {
+//    color: white;
+//}
 
 .sidebar ul a {
     display: inline-block;
@@ -69,11 +69,11 @@
 .sidebar ul a i {
     margin-right: 30px;
 }
-
-#sidebar-check:checked ~ .sidebar header:hover {
-    background-color: rgb(84, 152, 125);
-    font-size: 26px;
-}
+//
+//#sidebar-check:checked ~ .sidebar header:hover {
+//    background-color: rgb(84, 152, 125);
+//    font-size: 26px;
+//}
 
 #sidebar-check:checked ~ .sidebar {
     left: 0;
@@ -91,6 +91,12 @@
     .app-content {
         margin-left: 0 !important;
     }
+
+    body{
+        margin: 0;
+        padding: 0;
+    }
+
 
     nav {
         background: rgba(84, 152, 125, 0.9) !important;

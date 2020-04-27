@@ -10901,26 +10901,6 @@ a.text-dark:focus {
   display: none;
 }
 
-.sidebar header {
-  font-size: 22px;
-  text-align: center;
-  line-height: 70px;
-  background-color: rgba(84, 152, 125, 0.56);
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  transition: all 0.5s ease;
-}
-
-.sidebar header img {
-  margin-right: 10px;
-}
-
-.sidebar header a {
-  color: white;
-}
-
 .sidebar ul a {
   display: inline-block;
   justify-content: space-between;
@@ -10952,11 +10932,6 @@ a.text-dark:focus {
   margin-right: 30px;
 }
 
-#sidebar-check:checked ~ .sidebar header:hover {
-  background-color: #54987d;
-  font-size: 26px;
-}
-
 #sidebar-check:checked ~ .sidebar {
   left: 0;
 }
@@ -10973,6 +10948,11 @@ a.text-dark:focus {
 
   .app-content {
     margin-left: 0 !important;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
   }
 
   nav {
@@ -11044,8 +11024,9 @@ body {
 }
 
 .nav-logo {
+  float: right;
   display: inline-flex;
-  padding: 0 5em 2px;
+  padding: 0 3em 2px;
   text-decoration: none !important;
 }
 
