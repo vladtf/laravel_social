@@ -24,7 +24,7 @@
                 </a>
             </li>
             <li>
-                <a href="{{route('profile.show',['user'=>auth()->user()])}}"
+                <a href="{{route('profile.following')}}"
                    class="d-flex justify-content-between align-items-center">
                     Following
                     <i class="fa fa-group"></i>

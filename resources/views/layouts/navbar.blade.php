@@ -1,11 +1,10 @@
 <nav class="navbar navbar-expand-md shadow-sm navbar-style navbar-light fixed-top" id="navbar">
 
+    <button class="sidebar-toggle" id="sidebar-toggle" style="">
+        <span class="navbar-toggler-icon text-light"></span>
+    </button>
 
     <div class="container">
-            <button class="sidebar-toggle" id="sidebar-toggle" style="">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
             <a class="nav-logo" href="{{ url('/') }}">
                 <div>
                     <img src="/svg/laravelSocialLogo.svg" class="pr-3"
