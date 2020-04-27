@@ -1,19 +1,23 @@
 <nav class="navbar navbar-expand-md shadow-sm navbar-style navbar-light fixed-top" id="navbar">
 
-    <i class="navbar-toggler-icon sidebar-toggle float-left" id="sidebar-toggle"></i>
 
     <div class="container">
-        <a class="nav-logo" href="{{ url('/') }}" style="">
-            <div>
-                <img src="/svg/laravelSocialLogo.svg" class="pr-3"
-                     style="height: 20px; border-right: 1px solid #e2e3e5;">
-            </div>
-            <span class="text-light pl-3">Home</span>
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-            <span class="navbar-toggler-icon text-light"></span>
-        </button>
+            <button class="sidebar-toggle" id="sidebar-toggle" style="">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <a class="nav-logo" href="{{ url('/') }}">
+                <div>
+                    <img src="/svg/laravelSocialLogo.svg" class="pr-3"
+                         style="height: 20px; border-right: 1px solid #e2e3e5;">
+                </div>
+                <span class="text-light pl-3">Home</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
@@ -47,7 +51,8 @@
                     @endif
                 @else
 
-                    <div id="navbarDropdown" class="nav-link dropdown-toggle" role="button" style="cursor: pointer"
+                    <div id="navbarDropdown" class="nav-link dropdown-toggle" role="button"
+                         style="cursor: pointer; z-index: 1"
                          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                         {{ Auth::user()->username }} <span class="caret"></span>
                     </div>

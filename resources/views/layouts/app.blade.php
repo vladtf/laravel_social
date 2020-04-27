@@ -32,7 +32,7 @@
 @include('layouts.sidebar')
 
 <div id="app" class="app-content">
-    <div class="p-5 animated-div" id="content">
+    <div class="animated-div" id="content">
         <main>
             @yield('content')
         </main>
