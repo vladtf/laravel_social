@@ -11001,7 +11001,21 @@ body {
 }
 
 a {
-  transition: all 0.5s ease;
+  transition: all 1s ease;
+}
+
+.active-link {
+  background-color: #4675596e;
+  color: rgba(37, 62, 187, 0.24) !important;
+}
+
+nav .active-link {
+  background-color: transparent;
+  color: #253ebbd4 !important;
+}
+
+#nav-logo .active-link {
+  background-color: transparent;
 }
 
 .app-content {

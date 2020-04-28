@@ -71,6 +71,9 @@ $('a').click(function () {
     // Do animation here; duration = animDuration.
     $('#content').css('animation', 'disappear-animation .6s forwards 0s linear');
 
+    // Activate link
+    $(this).addClass('active-link');
+
     setTimeout(function () {
         window.location = href;
     }, animDuration);
@@ -87,12 +90,13 @@ document.addEventListener("DOMContentLoaded", function (event) {
         console.log('toggle sidebar')
         _sidebar_check.checked = !_sidebar_check.checked;
     });
-});
 
-$('a').each(function () {
-    console.log(this.href);
-    if (this.href === window.location.href) {
-        console.log('Found : ' + this.href);
-        $(this).css('background-color', '#1c2d1470');
-    }
+
+    $('a').each(function () {
+        console.log(this.href);
+        if (this.href === window.location.href) {
+            console.log('Found : ' + this.href);
+            $(this).addClass('active-link');
+        }
+    });
 });
