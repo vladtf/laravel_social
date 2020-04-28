@@ -10994,78 +10994,6 @@ a.text-dark:focus {
   outline: 1px solid rgba(177, 229, 218, 0.39);
 }
 
-body {
-  background: url("/background/background.jpg") no-repeat center center fixed;
-  background-size: cover;
-  -o-background-size: cover;
-}
-
-a {
-  transition: all 1s ease;
-}
-
-.active-link {
-  background-color: #4675596e;
-  color: rgba(37, 62, 187, 0.24) !important;
-}
-
-nav .active-link {
-  background-color: transparent;
-  color: #253ebbd4 !important;
-}
-
-#nav-logo .active-link {
-  background-color: transparent;
-}
-
-.app-content {
-  transition: all 0.5s ease;
-  margin-left: 80px;
-}
-
-.square {
-  width: 100%;
-  padding-bottom: 100%;
-  background-size: cover;
-  background-position: center;
-}
-
-.background {
-  background-color: #cf9f30;
-}
-
-.navbar-style {
-  background-color: rgba(84, 152, 125, 0.56);
-}
-
-.nav-link {
-  color: rgba(255, 255, 255, 0.68);
-}
-
-.nav-logo {
-  float: right;
-  display: inline-flex;
-  padding: 0 3em 2px;
-  text-decoration: none !important;
-}
-
-nav a {
-  color: white !important;
-}
-
-body::-webkit-scrollbar {
-  width: 0.5em;
-}
-
-body::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 6px rgba(58, 126, 90, 0.13);
-}
-
-body::-webkit-scrollbar-thumb {
-  background-color: #3a6d974f;
-  outline: 1px solid slategrey;
-}
-
 @-webkit-keyframes appear-animation {
   0% {
     transform: translateY(-2%);
@@ -11115,6 +11043,78 @@ body::-webkit-scrollbar-thumb {
 .animated-div {
   -webkit-animation: appear-animation 0.6s forwards 0s linear;
           animation: appear-animation 0.6s forwards 0s linear;
+}
+
+nav .active-link {
+  background-color: transparent;
+  color: #253ebbd4 !important;
+}
+
+#nav-logo .active-link {
+  background-color: transparent;
+}
+
+.navbar-style {
+  background-color: rgba(84, 152, 125, 0.56);
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.nav-logo {
+  float: right;
+  display: inline-flex;
+  padding: 0 3em 2px;
+  text-decoration: none !important;
+}
+
+nav a {
+  color: white !important;
+}
+
+body::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(58, 126, 90, 0.13);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #3a6d974f;
+  outline: 1px solid slategrey;
+}
+
+body {
+  background: url("/background/background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+a {
+  transition: all 1s ease;
+}
+
+.active-link {
+  background-color: #4675596e;
+  color: rgba(37, 62, 187, 0.24) !important;
+}
+
+.app-content {
+  transition: all 0.5s ease;
+  margin-left: 80px;
+}
+
+.square {
+  width: 100%;
+  padding-bottom: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.background {
+  background-color: #cf9f30;
 }
 
 .dropdown-item {

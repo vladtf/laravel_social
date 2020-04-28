@@ -1,0 +1,28 @@
+nav .active-link {
+    background-color: transparent;
+    color: #253ebbd4 !important;
+}
+
+#nav-logo .active-link {
+    background-color: transparent;
+
+}
+
+.navbar-style {
+    background-color: rgba(84, 152, 125, 0.56);
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.68);
+}
+
+.nav-logo {
+    float: right;
+    display: inline-flex;
+    padding: 0 3em 2px;
+    text-decoration: none !important;
+}
+
+nav a {
+    color: white !important;
+}

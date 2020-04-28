@@ -1,0 +1,24 @@
+@keyframes appear-animation {
+    0% {
+        transform: translateY(-2%);
+        opacity: .4;
+    }
+    100% {
+        transform: rotate(0) translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes disappear-animation {
+    0% {
+        transform: rotate(0) translateY(0);
+    }
+    100% {
+        transform: rotate(0) translateY(+8%);
+        opacity: 0;
+    }
+}
+
+.animated-div {
+    animation: appear-animation .6s forwards 0s linear;
+}
