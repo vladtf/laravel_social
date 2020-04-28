@@ -19,6 +19,10 @@ body {
     -o-background-size: cover;
 }
 
+a {
+    transition: all .5s ease;
+}
+
 .app-content {
     transition: all .5s ease;
     margin-left: 80px;
@@ -49,9 +53,11 @@ body {
     padding: 0 3em 2px;
     text-decoration: none !important;
 }
-nav a{
+
+nav a {
     color: white !important;
 }
+
 body::-webkit-scrollbar {
     width: 0.5em;
 }

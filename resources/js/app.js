@@ -35,13 +35,11 @@ const app = new Vue({
 
 // Post Page Resizing
 var fitComponentsSize = function () {
-
     $('#post-col-2').css('height', $('#post-col-1').height() + 'px');
 
     fitCommentsBlock()
 }
 var fitCommentsBlock = function () {
-
     $('#post-comments').css('height', ($('#post-col-2').height() - $('#post-footer').height() - $('#post-header').height()) + 'px');
 }
 
@@ -89,4 +87,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
         console.log('toggle sidebar')
         _sidebar_check.checked = !_sidebar_check.checked;
     });
+});
+
+$('a').each(function () {
+    console.log(this.href);
+    if (this.href === window.location.href) {
+        console.log('Found : ' + this.href);
+        $(this).css('background-color', '#1c2d1470');
+    }
 });
