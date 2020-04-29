@@ -11097,8 +11097,8 @@ a {
   transition: all 1s ease;
 }
 
-.dark-mode {
-  background: black !important;
+[data-theme=dark] {
+  background: #181818 !important;
   color: white;
 }
 

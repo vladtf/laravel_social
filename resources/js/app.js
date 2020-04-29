@@ -3,7 +3,7 @@
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
-
+window.darkMode = require('dark-mode-switch');
 window.Vue = require('vue');
 
 window.axios = require('axios');
@@ -99,10 +99,4 @@ document.addEventListener("DOMContentLoaded", function (event) {
             $(this).addClass('active-link');
         }
     });
-});
-
-
-const _dark_switch = document.getElementById('dark-switch')
-_dark_switch.addEventListener('change', function(){
-    document.body.classList.toggle("dark-mode");
 });

@@ -1948,6 +1948,18 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/dark-mode-switch/dark-mode-switch.min.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/dark-mode-switch/dark-mode-switch.min.js ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+!function(){var t,e=document.getElementById("darkSwitch");if(e){t=null!==localStorage.getItem("darkSwitch")&&"dark"===localStorage.getItem("darkSwitch"),(e.checked=t)?document.body.setAttribute("data-theme","dark"):document.body.removeAttribute("data-theme"),e.addEventListener("change",function(t){e.checked?(document.body.setAttribute("data-theme","dark"),localStorage.setItem("darkSwitch","dark")):(document.body.removeAttribute("data-theme"),localStorage.removeItem("darkSwitch"))})}}();
+
+
+/***/ }),
+
 /***/ "./node_modules/process/browser.js":
 /*!*****************************************!*\
   !*** ./node_modules/process/browser.js ***!
@@ -14584,6 +14596,7 @@ module.exports = g;
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
+window.darkMode = __webpack_require__(/*! dark-mode-switch */ "./node_modules/dark-mode-switch/dark-mode-switch.min.js");
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
@@ -14666,12 +14679,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
       $(this).addClass('active-link');
     }
   });
-});
-
-var _dark_switch = document.getElementById('dark-switch');
-
-_dark_switch.addEventListener('change', function () {
-  document.body.classList.toggle("dark-mode");
 });
 
 /***/ }),

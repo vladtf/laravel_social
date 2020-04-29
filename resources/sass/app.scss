@@ -27,8 +27,8 @@ a {
     transition: all 1s ease;
 }
 
-.dark-mode {
-    background: black !important;
+[data-theme="dark"] {
+    background: rgba(24, 24, 24, 1) !important;
     color: white;
 }
 
