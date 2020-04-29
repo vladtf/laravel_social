@@ -1,0 +1,19 @@
+[data-theme="dark"] {
+    background: rgba(24, 24, 24, 1) !important;
+    color: white;
+}
+
+[data-theme="dark"] .sidebar{
+    background: #232a27 !important;
+}
+[data-theme="dark"] nav{
+    background: #232a27 !important;
+}
+
+[data-theme="dark"] .nav-link{
+    color: white !important;
+}
+[data-theme="dark"] .active-link{
+    color: #b4d9ca !important;
+}
+

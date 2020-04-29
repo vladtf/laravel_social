@@ -11086,6 +11086,27 @@ body::-webkit-scrollbar-thumb {
   outline: 1px solid slategrey;
 }
 
+[data-theme=dark] {
+  background: #181818 !important;
+  color: white;
+}
+
+[data-theme=dark] .sidebar {
+  background: #232a27 !important;
+}
+
+[data-theme=dark] nav {
+  background: #232a27 !important;
+}
+
+[data-theme=dark] .nav-link {
+  color: white !important;
+}
+
+[data-theme=dark] .active-link {
+  color: #b4d9ca !important;
+}
+
 body {
   background: url("/background/background.jpg") no-repeat center center fixed;
   background-size: cover;
