@@ -36,10 +36,21 @@
                 <li class="nav-item">
                     <a href="/profile" class="nav-link">Search</a>
                 </li>
+
+
             </ul>
 
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ml-auto">
+
+                <li class="nav-item">
+                    <div class="nav-link">
+                        <div class="custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input" id="dark-switch">
+                            <label class="custom-control-label pt-1 text-lowercase" for="dark-switch">Dark</label>
+                        </div>
+                    </div>
+                </li>
                 <!-- Authentication Links -->
                 @guest
                     <li class="nav-item">
@@ -53,7 +64,7 @@
                 @else
 
                     <div id="navbarDropdown" class="nav-link dropdown-toggle" role="button"
-                         style="cursor: pointer; z-index: 1"
+                         style="cursor: pointer; z-index: 1; padding-top: .82em"
                          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                         {{ Auth::user()->username }} <span class="caret"></span>
                     </div>

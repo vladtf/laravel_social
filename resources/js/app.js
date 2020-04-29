@@ -100,3 +100,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
         }
     });
 });
+
+
+const _dark_switch = document.getElementById('dark-switch')
+_dark_switch.addEventListener('change', function(){
+    document.body.classList.toggle("dark-mode");
+});

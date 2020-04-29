@@ -14668,6 +14668,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
   });
 });
 
+var _dark_switch = document.getElementById('dark-switch');
+
+_dark_switch.addEventListener('change', function () {
+  document.body.classList.toggle("dark-mode");
+});
+
 /***/ }),
 
 /***/ "./resources/js/components/follow-button.vue":
