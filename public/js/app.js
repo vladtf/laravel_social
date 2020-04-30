@@ -14670,15 +14670,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
     console.log('toggle sidebar');
     _sidebar_check.checked = !_sidebar_check.checked;
   });
-
-  $('a').each(function () {
-    console.log(this.href);
-
-    if (this.href === window.location.href) {
-      console.log('Found : ' + this.href);
-      $(this).addClass('active-link');
-    }
-  });
 });
 
 /***/ }),

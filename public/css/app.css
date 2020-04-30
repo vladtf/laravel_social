@@ -11054,6 +11054,10 @@ nav .active-link {
   background-color: transparent;
 }
 
+#nav-logo .active-link span {
+  color: #253ebbd4 !important;
+}
+
 .navbar-style {
   background-color: rgba(84, 152, 125, 0.56);
 }
@@ -11104,6 +11108,10 @@ body::-webkit-scrollbar-thumb {
 }
 
 [data-theme=dark] .active-link {
+  color: #b4d9ca !important;
+}
+
+[data-theme=dark] #nav-logo .active-link span {
   color: #b4d9ca !important;
 }
 
