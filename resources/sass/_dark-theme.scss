@@ -3,17 +3,19 @@
     color: white;
 }
 
-[data-theme="dark"] .sidebar{
-    background: #232a27 !important;
-}
-[data-theme="dark"] nav{
+[data-theme="dark"] .sidebar {
     background: #232a27 !important;
 }
 
-[data-theme="dark"] .nav-link{
+[data-theme="dark"] nav {
+    background: #232a27 !important;
+}
+
+[data-theme="dark"] .nav-link {
     color: white !important;
 }
-[data-theme="dark"] .active-link{
+
+[data-theme="dark"] .active-link {
     color: #b4d9ca !important;
 }
 

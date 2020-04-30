@@ -53,11 +53,11 @@
                 </li>
                 <!-- Authentication Links -->
                 @guest
-                    <li class="nav-item">
+                    <li class="nav-item" style="padding-top: .15em">
                         <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                     </li>
                     @if (Route::has('register'))
-                        <li class="nav-item">
+                        <li class="nav-item" style="padding-top: .15em">
                             <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                         </li>
                     @endif
@@ -70,7 +70,8 @@
                     </div>
                     <li class="nav-item dropdown">
                         <div class="dropdown-menu dropdown-menu-right p-2"
-                             style="background-color: rgba(38,102,62,0.21);" aria-labelledby="navbarDropdown">
+                             style="background-color: rgba(38,102,62,0.21);"
+                             aria-labelledby="navbarDropdown">
                             <a href="{{route('profile.show',['user'=>auth()->id()])}}"
                                class="dropdown-item">
                                 My Profile
@@ -86,7 +87,7 @@
 
                             <div class="dropdown-divider"></div>
 
-                            <a class="dropdown-item" href="{{ route('logout') }}"
+                            <a class="dropdown-item" href="#"
                                onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}
                             </a>
