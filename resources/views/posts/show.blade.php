@@ -24,7 +24,9 @@
                                        style="text-decoration: none;">
                                         <img src="{{ $post->user->profile->profileImage() }}"
                                              class="rounded-circle w-50">
-                                        {{ $post->user->username }}
+                                        <span>
+                                            {{ $post->user->username }}
+                                        </span>
                                     </a>
                                 </div>
                                 <div class="col-6">

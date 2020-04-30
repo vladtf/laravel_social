@@ -33,7 +33,6 @@ const app = new Vue({
 });
 
 
-
 // Post Page Resizing
 var fitComponentsSize = function () {
     $('#post-col-2').css('height', $('#post-col-1').height() + 'px');
@@ -91,4 +90,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
         console.log('toggle sidebar')
         _sidebar_check.checked = !_sidebar_check.checked;
     });
+
+    $('a').each(function () {
+        if (this.href === window.location.href) {
+            console.log('Found : ' + this.href);
+            $(this).addClass('active-link');
+        }
+    });
+
 });

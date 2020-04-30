@@ -42,9 +42,9 @@
                                 </label>
                             </div>
                         </div>
-                        <div>
+                        <div >
                             <!-- Forgot password -->
-                            <a href="">Forgot password?</a>
+                            <a href="#">Forgot password?</a>
                         </div>
                     </div>
 
