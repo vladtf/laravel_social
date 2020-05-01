@@ -11104,6 +11104,12 @@ h5 {
   color: white !important;
 }
 
+.footer-bottom {
+  margin-top: 10em;
+  padding-top: 1em;
+  background-color: rgba(84, 152, 125, 0.3);
+}
+
 body {
   background: url("/background/background.jpg") no-repeat center center fixed;
   background-size: cover;

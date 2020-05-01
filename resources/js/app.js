@@ -63,6 +63,13 @@ const _sidebar_check = document.getElementById('sidebar-check')
 const _sidebar_toggle_btn = document.getElementById('sidebar-toggle')
 
 $('a').click(function () {
+
+    // Animation block open new tab on link
+    if ($(this).attr("target") === "_blank") {
+        console.log('new page');
+        return;
+    }
+
     _sidebar_check.checked = false;
     var href = $(this).attr("href");
 
