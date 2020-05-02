@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md shadow-sm navbar-style navbar-light fixed-top" id="navbar">
+<nav class="navbar navbar-expand-md shadow-sm navbar-style navbar-light fixed-top" id="navbar" style="width: 100%">
 
 
     <div class="container">

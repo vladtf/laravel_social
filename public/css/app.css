@@ -10953,6 +10953,12 @@ a.text-dark:focus {
   padding: 0 5em;
 }
 
+.post-index-style {
+  padding: 2rem !important;
+  margin: 2rem 0;
+  color: white;
+}
+
 .comment-block::-webkit-scrollbar {
   width: 0.5em;
 }
@@ -11109,7 +11115,8 @@ h5 {
   color: white !important;
 }
 
-[data-theme=dark] strong {
+[data-theme=dark] strong,
+input {
   color: white !important;
 }
 

@@ -2,14 +2,15 @@
 
 @section('content')
 
-    <div class="container">
-            <!-- Search form -->
-            <form method="get" class="form-inline text-center d-flex md-form form-sm mt-0 pt-5 pl-xl-5 align-items-baseline" action="{{route('profile.index')}}">
-                <i class="fa fa-search" aria-readonly="true"></i>
-                <input class="form-control form-control-sm ml-3 w-100" type="text" placeholder="Search"
-                       aria-label="Search" name="search" id="search" value="{{ $search }}">
-            </form>
+    <!-- Search form -->
+    <form method="get" class="form-inline text-center d-flex pl-xl-5 align-items-baseline"
+          action="{{route('profile.index')}}">
+        <i class="fa fa-search" aria-readonly="true"></i>
+        <input class="form-control form-control-sm ml-3" type="text" placeholder="Search"
+               aria-label="Search" name="search" id="search" value="{{ $search }}">
+    </form>
 
+    <div class="container">
         @foreach($users as $user)
             @php
                 $follows = (auth()->user()) ? auth()->user()->following->contains($user->id) : false;
@@ -26,7 +27,7 @@
 
                     <a href="/profile/{{$user->id}}" class="text-dark">
                         <img src="{{ $user->profile->profileImage() }}"
-                             class="rounded-circle w-100 border border-info" alt="">
+                             class="rounded-circle w-100 border border-info" alt="no-image">
                     </a>
                 </div>
 
@@ -43,7 +44,6 @@
                         @can('update', $user->profile)
                             <a href="/p/create">Add new posts</a>
                         @endcan
-
                     </div>
 
                     @can('update', $user->profile)
@@ -59,11 +59,12 @@
                     <div class="pt-4">{{$user->profile->description}}</div>
                     <div><a href="#">{{$user->profile->url}}</a></div>
                 </div>
-                @endforeach
-                <div class="row">
-                    <div class="col-12 d-flex justify-content-center">
-                        {{ $users -> links() }}
-                    </div>
-                </div>
             </div>
+        @endforeach
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center">
+                {{ $users -> links() }}
+            </div>
+        </div>
+    </div>
 @endsection
