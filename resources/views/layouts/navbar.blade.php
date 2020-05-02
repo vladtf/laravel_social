@@ -46,7 +46,7 @@
 
                 <li class="nav-item">
                     <div class="nav-link">
-                        <div class="custom-control custom-switch">
+                        <div class="custom-control custom-switch ml-2">
                             <input type="checkbox" class="custom-control-input" id="darkSwitch">
                             <label class="custom-control-label pt-1 text-lowercase" for="darkSwitch">Dark</label>
                         </div>

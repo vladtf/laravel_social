@@ -10942,14 +10942,15 @@ a.text-dark:focus {
 }
 
 .profile-post-style,
-.post-index-style {
+.post-index-style,
+.post-style {
   box-shadow: 9px -8px 21px -4px #77a0ab;
 }
 
 .post-style {
   background-color: rgba(122, 151, 110, 0.27);
   border-radius: 1em;
-  box-shadow: 0 0 0 1px rgba(171, 144, 76, 0.76);
+  padding: 0 5em;
 }
 
 .comment-block::-webkit-scrollbar {
@@ -11070,6 +11071,10 @@ body::-webkit-scrollbar-thumb {
   background: #232a27 !important;
 }
 
+[data-theme=dark] .footer-bottom {
+  background: #232a27 !important;
+}
+
 [data-theme=dark] nav {
   background: #232a27 !important;
 }
@@ -11101,6 +11106,10 @@ h5 {
 }
 
 [data-theme=dark] button {
+  color: white !important;
+}
+
+[data-theme=dark] strong {
   color: white !important;
 }
 

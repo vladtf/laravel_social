@@ -7,6 +7,10 @@
     background: #232a27 !important;
 }
 
+[data-theme="dark"] .footer-bottom {
+    background: #232a27 !important;
+}
+
 [data-theme="dark"] nav {
     background: #232a27 !important;
 }
@@ -34,7 +38,12 @@
 [data-theme="dark"] a {
     color: white !important;
 }
+
 [data-theme="dark"] button {
+    color: white !important;
+}
+
+[data-theme="dark"] strong {
     color: white !important;
 }
 

@@ -1,4 +1,4 @@
-.profile-post-style, .post-index-style {
+    .profile-post-style, .post-index-style, .post-style {
     -webkit-box-shadow: 9px -8px 21px -4px rgba(119, 160, 171, 1);
     -moz-box-shadow: 9px -8px 21px -4px rgba(119, 160, 171, 1);
     box-shadow: 9px -8px 21px -4px rgba(119, 160, 171, 1);
@@ -7,7 +7,11 @@
 .post-style {
     background-color: rgba(122, 151, 110, 0.27);
     border-radius: 1em;
-    box-shadow: 0 0 0 1px rgba(171, 144, 76, 0.76);
+    padding: 0 5em;
+}
+
+.post-index-style{
+
 }
 
 .comment-block::-webkit-scrollbar {
