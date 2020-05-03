@@ -15,6 +15,7 @@
 @import "body-scrollbar";
 @import "dark-theme";
 @import "footer";
+@import "media";
 
 body {
     background: url('/background/background.jpg') no-repeat center center fixed;
@@ -59,33 +60,5 @@ a {
 .dropdown-item:hover {
     color: white !important;
     background-color: rgba(40, 86, 61, 0.34) !important;
-}
-
-@media (max-width: 768px) {
-    .sidebar {
-        left: -100%;
-        background: rgba(84, 152, 125, 0.9);
-    }
-    .app-content {
-        margin-left: 0 !important;
-    }
-
-    body{
-        margin: 0;
-        padding: .5em;
-    }
-
-
-    nav {
-        background: rgba(84, 152, 125, 0.9) !important;
-
-        a, div {
-            color: white !important;
-        }
-    }
-
-    #sidebar-check:checked ~ .sidebar {
-        width: 100% !important;
-    }
 }
 

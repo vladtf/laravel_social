@@ -33,34 +33,25 @@ const app = new Vue({
 });
 
 
-// Post Page Resizing
-var fitComponentsSize = function () {
-    $('#post-col-2').css('height', $('#post-col-1').height() + 'px');
-
-    fitCommentsBlock()
-}
-var fitCommentsBlock = function () {
-    $('#post-comments').css('height', ($('#post-col-2').height() - $('#post-footer').height() - $('#post-header').height()) + 'px');
-}
-
-if ($(window).width() >= 768) {
-    fitComponentsSize();
-}
-
-$(window).resize(function () {
-    if ($(window).width() >= 768) {
-        fitComponentsSize();
-    } else {
-
-        $('#post-col-2').css('height', '100%');
-        $('#post-comments').css('height', '100%');
-        fitCommentsBlock();
+// Check current link
+$('a').each(function () {
+    if (this.href === window.location.href) {
+        $(this).addClass('active-link');
     }
 });
 
+// Sidebar top
+$('#sidebar').css({"top": $('nav').outerHeight(true)});
 
+// Sidebar toggling
 const _sidebar_check = document.getElementById('sidebar-check')
 const _sidebar_toggle_btn = document.getElementById('sidebar-toggle')
+
+_sidebar_toggle_btn.addEventListener('click', function (event) {
+    console.log('toggle sidebar')
+    _sidebar_check.checked = !_sidebar_check.checked;
+});
+
 
 $('a').click(function () {
 
@@ -88,21 +79,28 @@ $('a').click(function () {
     return false; // prevent user navigation away until animation's finished
 });
 
-$('#sidebar').css({"top": $('nav').outerHeight(true)});
-$('#sidebar-check').checked = true;
+// Post Page Resizing
+var fitComponentsSize = function () {
+    $('#post-col-2').css('height', $('#post-col-1').height() + 'px');
 
-document.addEventListener("DOMContentLoaded", function (event) {
+    fitCommentsBlock()
+}
+var fitCommentsBlock = function () {
+    $('#post-comments').css('height', ($('#post-col-2').height() - $('#post-footer').height() - $('#post-header').height()) + 'px');
+}
 
-    _sidebar_toggle_btn.addEventListener('click', function (event) {
-        console.log('toggle sidebar')
-        _sidebar_check.checked = !_sidebar_check.checked;
-    });
+if ($(window).width() >= 768) {
+    fitComponentsSize();
+}
 
-    $('a').each(function () {
-        if (this.href === window.location.href) {
-            console.log('Found : ' + this.href);
-            $(this).addClass('active-link');
-        }
-    });
+$(window).resize(function () {
+    if ($(window).width() >= 768) {
+        fitComponentsSize();
+    } else {
 
+        $('#post-col-2').css('height', '100%');
+        $('#post-comments').css('height', '100%');
+        fitCommentsBlock();
+    }
 });
+

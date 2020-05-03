@@ -14619,6 +14619,45 @@ Vue.component('follow-button', __webpack_require__(/*! ./components/follow-butto
 
 var app = new Vue({
   el: '#app'
+}); // Check current link
+
+$('a').each(function () {
+  if (this.href === window.location.href) {
+    $(this).addClass('active-link');
+  }
+}); // Sidebar top
+
+$('#sidebar').css({
+  "top": $('nav').outerHeight(true)
+}); // Sidebar toggling
+
+var _sidebar_check = document.getElementById('sidebar-check');
+
+var _sidebar_toggle_btn = document.getElementById('sidebar-toggle');
+
+_sidebar_toggle_btn.addEventListener('click', function (event) {
+  console.log('toggle sidebar');
+  _sidebar_check.checked = !_sidebar_check.checked;
+});
+
+$('a').click(function () {
+  // Animation block open new tab on link
+  if ($(this).attr("target") === "_blank") {
+    console.log('new page');
+    return;
+  }
+
+  _sidebar_check.checked = false;
+  var href = $(this).attr("href");
+  var animDuration = 600; // Do animation here; duration = animDuration.
+
+  $('#content').css('animation', 'disappear-animation .6s forwards 0s linear'); // Activate link
+
+  $(this).addClass('active-link');
+  setTimeout(function () {
+    window.location = href;
+  }, animDuration);
+  return false; // prevent user navigation away until animation's finished
 }); // Post Page Resizing
 
 var fitComponentsSize = function fitComponentsSize() {
@@ -14642,47 +14681,6 @@ $(window).resize(function () {
     $('#post-comments').css('height', '100%');
     fitCommentsBlock();
   }
-});
-
-var _sidebar_check = document.getElementById('sidebar-check');
-
-var _sidebar_toggle_btn = document.getElementById('sidebar-toggle');
-
-$('a').click(function () {
-  // Animation block open new tab on link
-  if ($(this).attr("target") === "_blank") {
-    console.log('new page');
-    return;
-  }
-
-  _sidebar_check.checked = false;
-  var href = $(this).attr("href");
-  var animDuration = 600; // Do animation here; duration = animDuration.
-
-  $('#content').css('animation', 'disappear-animation .6s forwards 0s linear'); // Activate link
-
-  $(this).addClass('active-link');
-  setTimeout(function () {
-    window.location = href;
-  }, animDuration);
-  return false; // prevent user navigation away until animation's finished
-});
-$('#sidebar').css({
-  "top": $('nav').outerHeight(true)
-});
-$('#sidebar-check').checked = true;
-document.addEventListener("DOMContentLoaded", function (event) {
-  _sidebar_toggle_btn.addEventListener('click', function (event) {
-    console.log('toggle sidebar');
-    _sidebar_check.checked = !_sidebar_check.checked;
-  });
-
-  $('a').each(function () {
-    if (this.href === window.location.href) {
-      console.log('Found : ' + this.href);
-      $(this).addClass('active-link');
-    }
-  });
 });
 
 /***/ }),
