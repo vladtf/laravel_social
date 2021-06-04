@@ -16,7 +16,7 @@ It's a web social app based on Laravel - php framerwok.
 
 `$ npm run dev` ( compile assets )
 
-`$ php artian migrate`
+`$ php artisan migrate`
 
 `$ php artisan key:generate`
 
